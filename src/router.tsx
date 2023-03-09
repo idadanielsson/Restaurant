@@ -6,29 +6,27 @@ import { Home } from "./components/restaurant/home/Home";
 import { Menu } from "./components/restaurant/menu/Menu";
 
 export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <App />,  
-        children: [
-            {
-                path: '/',
-                element: <Home />,
-                index:true,
-            },
-            {
-                path: '/booking',
-                element: <Booking />,
-            }, 
-            {
-                path: '/menu',
-                element: <Menu />,
-                
-            },
-            {
-                path: '/admin',
-                element: <Admin />
-            }
-        ],
-        
-    },
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+        index: true,
+      },
+      {
+        path: "/booking",
+        element: <Booking />,
+      },
+      {
+        path: "/menu",
+        element: <Menu />,
+      },
+      {
+        path: "/admin",
+        element: <Admin />,
+      },
+    ],
+  },
 ]);
