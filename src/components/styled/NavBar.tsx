@@ -4,13 +4,15 @@ import { BG_COLOR } from "./Colors";
 
 export const NavBar = styled.nav`
   width: 100%;
-  height: 10vh;
-  background-color: ${BG_COLOR};
+  height: 5vh;
+  position: absolute;
+  z-index: 1;
 `;
 
 export const NavList = styled.ul`
   display: flex;
   justify-content: end;
+  margin: 0px;
 `;
 
 export const NavItem = styled.li`
