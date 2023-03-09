@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { BG_COLOR } from "./Wrappers";
+import { BG_COLOR } from "./Colors";
 
 export const NavBar = styled.nav`
   width: 100%;

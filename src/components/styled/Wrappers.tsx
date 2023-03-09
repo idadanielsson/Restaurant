@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-export const BG_COLOR = "#1E1F20";
+import { BG_COLOR } from "./Colors";
 
 export const BackgroundWrapper = styled.div`
   width: 100%;
