@@ -1,5 +1,9 @@
-import { BackgroundWrapper } from "../../styled/Wrappers";
+import { Wrapper } from "../../styled/Wrappers";
 
 export const Home = () => {
-  return <></>;
+  return (
+    <>
+      <Wrapper width="500px">Hej</Wrapper>
+    </>
+  );
 };
