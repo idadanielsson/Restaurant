@@ -28,3 +28,13 @@ export const H5 = styled.h5`
   font-weight: 300;
   width: 40%;
 `;
+
+export const AmountOfGuestsHeading = styled(H5)`
+  width: 50%;
+  padding: 20px;
+`;
+
+export const BookingFormHeading = styled(H5)`
+  font-size: 25px;
+  padding: 10px;
+`;
