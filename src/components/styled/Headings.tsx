@@ -5,6 +5,7 @@ export interface IHeadingsProps {
   height?: string;
   width?: string;
   fontSize?: string;
+  color?: string;
 }
 
 export const H1 = styled.h1`
@@ -21,8 +22,8 @@ export const H2 = styled.h2`
   font-family: "Cormorant Infant", serif;
   text-transform: uppercase;
   margin: 0px;
-  color: ${FONT_COLOR};
   font-weight: 300;
+  color: ${FONT_COLOR};
 `;
 
 export const H3 = styled.h3`
@@ -38,7 +39,7 @@ export const H5 = styled.h5`
   font-size: 26px;
   font-family: "Cormorant Infant", serif;
   margin: 0px;
-  color: ${FONT_COLOR};
+  color: ${(props: IHeadingsProps) => props.color};
   font-weight: 300;
   width: ${(props: IHeadingsProps) => props.width};
 `;

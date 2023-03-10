@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BG_COLOR, CHAMPAGNE } from "./Colors";
+import { BG_COLOR, CHAMPAGNE, DARK_FONT_COLOR, FONT_COLOR } from "./Colors";
 
 export interface IRestaurantWrapperProps {
   height?: string;
@@ -7,6 +7,7 @@ export interface IRestaurantWrapperProps {
   display?: string;
   direction?: string;
   justify?: string;
+  align?: string;
   bgcolor?: string;
   bgimage?: string;
 }
@@ -19,6 +20,7 @@ export const Wrapper = styled.div`
   display: ${(props: IRestaurantWrapperProps) => props.display};
   flex-direction: ${(props: IRestaurantWrapperProps) => props.direction};
   justify-content: ${(props: IRestaurantWrapperProps) => props.justify};
+  align-items: ${(props: IRestaurantWrapperProps) => props.align};
   background-color: ${(props: IRestaurantWrapperProps) => props.bgcolor};
 `;
 
@@ -102,10 +104,35 @@ export const LocationTextContainer = styled.div`
   width: 60%;
   display: flex;
   flex-direction: column;
+  color: ${FONT_COLOR};
 `;
 
 export const LocationBTNContainer = styled.div`
   width: 60%;
   display: flex;
   flex-direction: column;
+`;
+
+// FOOTER
+
+export const FooterWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+`;
+
+export const FooterContentWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+`;
+
+export const FooterIconLinks = styled.a`
+  color: ${DARK_FONT_COLOR};
+  font-size: 50px;
+  padding: 7px;
+  box-shadow: 0 0 5px #716153;
+  width: 50px;
+  height: 50px;
 `;
