@@ -49,7 +49,7 @@ export const MenuSmall = () => {
     <Wrapper>
       <SmallMenuWrapper height="30vh" bgcolor={BG_COLOR}>
         <SmallMenuTitleWrapper>
-          <H2>ON THE MENU</H2>
+          <H2>På menyn</H2>
         </SmallMenuTitleWrapper>
       </SmallMenuWrapper>
       <SmallMenuWrapper height="70vh">{menuSmallHtml}</SmallMenuWrapper>

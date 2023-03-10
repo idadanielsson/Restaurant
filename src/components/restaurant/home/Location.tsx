@@ -20,7 +20,7 @@ export const Location = () => {
     >
       <LocationWrapper bgimage={foodPlate}></LocationWrapper>
       <LocationTextWrapper>
-        <H3 width="50%">Experience excellent dining at 76 Gastronome</H3>
+        <H3 width="49%">Upplev en utmärkt middag på 76 Gastronome</H3>
         <LocationTextContainer>
           <H5>Nybrogatan 76, 114 39 Stockholm</H5>
           <H5>Contact@76gastronome.com</H5>
