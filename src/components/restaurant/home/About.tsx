@@ -13,7 +13,6 @@ export const About = () => {
           dess men vår strävan efter perfektion kvarstår.
         </H5>
       </AboutTextWrapper>
-
       <AboutImageWrapper></AboutImageWrapper>
     </Wrapper>
   );

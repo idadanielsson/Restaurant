@@ -15,7 +15,6 @@ export const AboutImageWrapper = styled.div`
 export const HeroWrapper = styled.div`
   height: 100%;
   width: 100%;
-
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

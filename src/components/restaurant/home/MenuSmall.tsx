@@ -4,9 +4,16 @@ import { IMenuList } from "../../../models/IMenuList";
 import menuPlates from "./../../../assets/restaurant-plate-3.png";
 import menuBrew from "./../../../assets/restaurant-brew.png";
 import menuDrinks from "./../../../assets/restaurant-plate-2.png";
-import { SmallMenuWrapper } from "../../styled/Wrappers";
+import {
+  SmallMenuTitleWrapper,
+  SmallMenuWrapper,
+  Wrapper,
+} from "../../styled/Wrappers";
 import { SmallMenu, SmallMenuText } from "../../styled/SmallMenu";
-import { MenuSmallImage, MenuSmallImageContainer } from "../../styled/Images";
+import { useNavigate } from "react-router-dom";
+import { BG_COLOR } from "../../styled/Colors";
+import { H2 } from "../../styled/Headings";
+import { Button } from "../../styled/Buttons";
 
 export const MenuSmall = () => {
   const [menuSmall, setMenuSmall] = useState<IMenuList[]>([
@@ -24,15 +31,28 @@ export const MenuSmall = () => {
     },
   ]);
 
+  const navigate = useNavigate();
+
+  const toMenus = () => {
+    navigate(`/menu`);
+  };
+
   let menuSmallHtml = menuSmall.map((menuSmall) => {
     return (
-      <SmallMenu>
-        <MenuSmallImageContainer>
-          <MenuSmallImage src={menuSmall.image} alt={menuSmall.name} />
-        </MenuSmallImageContainer>
-        <SmallMenuText>{menuSmall.name}</SmallMenuText>
+      <SmallMenu bgimage={menuSmall.image}>
+        <Button onClick={toMenus}>{menuSmall.name}</Button>
       </SmallMenu>
     );
   });
-  return <SmallMenuWrapper>{menuSmallHtml}</SmallMenuWrapper>;
+
+  return (
+    <Wrapper>
+      <SmallMenuWrapper height="30vh" bgcolor={BG_COLOR}>
+        <SmallMenuTitleWrapper>
+          <H2>ON THE MENU</H2>
+        </SmallMenuTitleWrapper>
+      </SmallMenuWrapper>
+      <SmallMenuWrapper height="70vh">{menuSmallHtml}</SmallMenuWrapper>
+    </Wrapper>
+  );
 };
