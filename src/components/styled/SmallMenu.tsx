@@ -21,6 +21,5 @@ export const SmallMenuText = styled.p`
   justify-content: center;
   align-items: center;
   margin: 0;
-
   border: 1px solid ${FONT_COLOR};
 `;

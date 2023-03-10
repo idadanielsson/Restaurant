@@ -5,6 +5,7 @@ export interface IRestaurantWrapperProps {
   height?: string;
   width?: string;
   display?: string;
+  direction?: string;
   justify?: string;
   bgcolor?: string;
   bgimage?: string;
@@ -16,6 +17,7 @@ export const Wrapper = styled.div`
   height: ${(props: IRestaurantWrapperProps) => props.height};
   width: ${(props: IRestaurantWrapperProps) => props.width};
   display: ${(props: IRestaurantWrapperProps) => props.display};
+  flex-direction: ${(props: IRestaurantWrapperProps) => props.direction};
   justify-content: ${(props: IRestaurantWrapperProps) => props.justify};
   background-color: ${(props: IRestaurantWrapperProps) => props.bgcolor};
 `;
@@ -74,4 +76,36 @@ export const SmallMenuTitleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+`;
+
+// LOCATION
+
+export const LocationWrapper = styled.div`
+  background-image: url(${(props: IRestaurantWrapperProps) => props.bgimage});
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+`;
+
+export const LocationTextWrapper = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 100px;
+`;
+
+export const LocationTextContainer = styled.div`
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const LocationBTNContainer = styled.div`
+  width: 60%;
+  display: flex;
+  flex-direction: column;
 `;

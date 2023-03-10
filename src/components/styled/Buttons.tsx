@@ -11,6 +11,7 @@ export const Button = styled.button`
   transition: all ease 0.2s;
   font-family: "Cormorant Infant", serif;
   font-weight: bold;
+  border-radius: 50px;
   :hover {
     background-color: #ab947e;
   }
@@ -26,7 +27,8 @@ export const HeroButton = styled.button`
   transition: all ease 0.2s;
   font-family: "Cormorant Infant", serif;
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: uppercase; //osäker
+  border-radius: 50px;
   :hover {
     background-color: #ab947e;
   }

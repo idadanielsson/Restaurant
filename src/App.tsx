@@ -1,7 +1,8 @@
 import "./App.css";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { Nav } from "./components/nav/Nav";
 import { BackgroundWrapper } from "./components/styled/Wrappers";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
           <Outlet />
         </main>
 
-        <footer></footer>
+        <footer>
+          <Footer />
+        </footer>
       </BackgroundWrapper>
     </>
   );
