@@ -58,12 +58,16 @@ export const TableSearch = () => {
 
   return (
     <BookingWrapper>
-      <AmountOfGuestsHeading>Välj antal gäster</AmountOfGuestsHeading>
+      <AmountOfGuestsHeading fontSize="26px">
+        Välj antal gäster
+      </AmountOfGuestsHeading>
       <AmountOfGuestsWrapper>{amountOfGuestsHtml}</AmountOfGuestsWrapper>
       <CalendarWrapper>
         <Calendar onClickDay={handleDate} />
       </CalendarWrapper>
-      <AmountOfGuestsHeading>Föredragen tid</AmountOfGuestsHeading>
+      <AmountOfGuestsHeading fontSize="26px">
+        Föredragen tid
+      </AmountOfGuestsHeading>
 
       <SearchTableTimesWrapper>
         <TimesButton
