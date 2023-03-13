@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { HeroButton } from "../../styled/Buttons";
 import { H1 } from "../../styled/Headings";
 import { HeroWrapper } from "../../styled/Images";
+import backgroundImage from "./../../../assets/restaurant-hero.png";
 import {
   HomeButtonWrapper,
   HomeHeadingWrapper,
@@ -20,7 +21,7 @@ export const Home = () => {
   return (
     <>
       <Wrapper height="95vh" width="100%">
-        <HeroWrapper>
+        <HeroWrapper bgImage={backgroundImage}>
           <HomeHeadingWrapper>
             <H1>76</H1>
             <H1>Gastronome</H1>

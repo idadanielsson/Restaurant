@@ -1,6 +1,9 @@
 import styled from "styled-components";
-import backgroundImage from "./../../assets/restaurant-hero.png";
 import aboutIMage from "./../../assets/restaurant-pasta.png";
+
+export interface IImageProps {
+  bgImage?: string;
+}
 
 export const AboutImageWrapper = styled.div`
   background-image: url(${aboutIMage});
@@ -12,16 +15,19 @@ export const AboutImageWrapper = styled.div`
   bottom: 0;
 `;
 
-export const HeroWrapper = styled.div`
+export const BackgroundImage = styled.div`
   height: 100%;
   width: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url(${(props: IImageProps) => props.bgImage});
+`;
+
+export const HeroWrapper = styled(BackgroundImage)`
   position: absolute;
   top: 0;
   z-index: 0;
-  background-image: url(${backgroundImage});
 `;
 
 export const MenuSmallImage = styled.img`
