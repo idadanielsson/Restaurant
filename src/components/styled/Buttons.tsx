@@ -21,7 +21,7 @@ export const Button1 = styled.button`
   cursor: pointer;
 `;
 
-export const TimesButton = styled(Button)`
+export const TimesButton = styled(Button1)`
   border-radius: 2px;
   &:hover {
     background-color: ${FONT_COLOR};
@@ -50,15 +50,4 @@ export const Button = styled.button`
   font-weight: 700;
   font-size: large;
   cursor: pointer;
-`;
-
-export const TimesButton = styled(Button)`
-  border-radius: 2px;
-  &:hover {
-    background-color: ${FONT_COLOR};
-    color: ${BG_COLOR};
-  }
-  &:active {
-    background-color: red;
-  }
 `;
