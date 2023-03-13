@@ -56,12 +56,3 @@ export const SmallMenuWrapper = styled.div`
   display: grid;
   display: flex;
 `;
-
-export const CategoryWrapper = styled.div`
-  width: 40%;
-  padding: 20px;
-`;
-
-export const MenuWrapper = styled.div`
-  width: 50%;
-`;
