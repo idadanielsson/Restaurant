@@ -47,9 +47,11 @@ export const H5 = styled.h5`
 export const AmountOfGuestsHeading = styled(H5)`
   width: 50%;
   padding: 20px;
+  color: ${FONT_COLOR};
 `;
 
 export const BookingFormHeading = styled(H5)`
   font-size: 25px;
   padding: 10px;
+  color: ${FONT_COLOR};
 `;

@@ -10,6 +10,7 @@ export interface IRestaurantWrapperProps {
   align?: string;
   bgcolor?: string;
   bgimage?: string;
+  color?: string;
 }
 
 //
@@ -242,8 +243,8 @@ export const AmountOfGuestsWrapper = styled.div`
 `;
 
 export const AmountOfGuestsCard = styled.div`
-  background-color: ${CHAMPAGNE};
-  color: ${FONT_COLOR};
+  background-color: ${(props: IRestaurantWrapperProps) => props.bgcolor};
+  color: ${(props: IRestaurantWrapperProps) => props.color};
   height: 80px;
   width: 80px;
   display: flex;
@@ -278,7 +279,7 @@ export const InputWrapper = styled.div`
   justify-content: space-around;
 `;
 
-export const FormWrapper = styled.div`
+export const FormWrapper = styled.form`
   width: 60%;
   display: grid;
   grid-template-columns: 40% 40%;

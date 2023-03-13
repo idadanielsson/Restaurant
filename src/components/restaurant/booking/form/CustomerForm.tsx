@@ -1,4 +1,5 @@
-import { ChangeEvent, FormEvent } from "react";
+import { ChangeEvent, FormEvent, useContext } from "react";
+import { createBooking } from "../../../../services/RestaurantService";
 import { Button } from "../../../styled/Buttons";
 import { BookingFormHeading } from "../../../styled/Headings";
 import { Input } from "../../../styled/Inputs";
@@ -7,46 +8,38 @@ import {
   BookTableButtonWrapper,
   FormWrapper,
   InputWrapper,
-  SearchTableButtonWrapper,
 } from "../../../styled/Wrappers";
+import { BookingContext } from "../Booking";
 
 export const CustomerForm = () => {
-  // const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-  //   if (e.target.type === "text") {
-  //     setNånting({ ...nånting, [e.target.name]: e.target.value });
-  //     if (e.target.type === "number") {
-  //       setNånting({ ...nånting, [e.target.name]: e.target.value });
-  //     }
-  //     if (e.target.type === "e-mail") {
-  //       setNånting({ ...nånting, [e.target.name]: e.target.value });
-  //     }
-  //   }
-  // };
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-  };
+  const { handleChange, booking } = useContext(BookingContext);
   return (
     <BookingWrapper>
-      <FormWrapper onSubmit={handleSubmit}>
+      <FormWrapper
+        onSubmit={(e: FormEvent) => {
+          e.preventDefault();
+          createBooking(booking);
+          console.log("hej");
+        }}
+      >
         <InputWrapper>
           <BookingFormHeading>Förnamn</BookingFormHeading>
-          <Input type="text" name="firstname"></Input>
+          <Input type="text" onChange={handleChange} name="name"></Input>
         </InputWrapper>
         <InputWrapper>
           <BookingFormHeading>Efternamn</BookingFormHeading>
 
-          <Input type="text" name="lastname"></Input>
+          <Input type="text" onChange={handleChange} name="lastname"></Input>
         </InputWrapper>
         <InputWrapper>
           <BookingFormHeading>Telefonnummer</BookingFormHeading>
 
-          <Input type="text" name="phone"></Input>
+          <Input type="text" onChange={handleChange} name="phone"></Input>
         </InputWrapper>
         <InputWrapper>
           <BookingFormHeading>E-post</BookingFormHeading>
 
-          <Input type="e-mail" name="mail"></Input>
+          <Input type="e-mail" onChange={handleChange} name="email"></Input>
         </InputWrapper>
         <BookTableButtonWrapper>
           <Button height="50px" width="200px">
