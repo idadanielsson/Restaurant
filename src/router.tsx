@@ -4,7 +4,10 @@ import { Contact } from "./components/contact/Contaxt";
 import { Admin } from "./components/restaurant/admin/Admin";
 import { Booking } from "./components/restaurant/booking/Booking";
 import { Home } from "./components/restaurant/home/Home";
-import { Menu } from "./components/restaurant/menu/Menu";
+import { Category } from "./components/restaurant/home/menu/Category";
+import { Menu } from "./components/restaurant/home/menu/Menu";
+import { MenuItem } from "./components/restaurant/home/menu/MenuItem";
+import { MenuList } from "./components/restaurant/home/menu/MenuList";
 
 export const router = createBrowserRouter([
   {
@@ -23,7 +26,14 @@ export const router = createBrowserRouter([
       {
         path: "/menu",
         element: <Menu />,
+        children: [
+          {
+            path: "/menu/:id",
+            element: <MenuList />,
+          },
+        ],
       },
+
       {
         path: "/admin",
         element: <Admin />,
