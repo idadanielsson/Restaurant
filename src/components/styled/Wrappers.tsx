@@ -178,11 +178,17 @@ export const AmountOfGuestsCard = styled.div`
   }
 `;
 
+export const SearchTableTimesWrapper = styled.div`
+  width: 50%;
+  display: flex;
+  gap: 3px;
+`;
+
 export const SearchTableButtonWrapper = styled.div`
   margin-top: 40px;
-  width: 49%;
+  width: 50%;
   display: flex;
-  justify-content: end;
+  justify-content: start;
 `;
 
 export const InputWrapper = styled.div`
@@ -202,8 +208,8 @@ export const FormWrapper = styled.div`
 
 export const BookTableButtonWrapper = styled.div`
   margin-top: 40px;
-  width: 60%;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   gap: 40px;
 `;
