@@ -1,5 +1,6 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../styled/Buttons";
-import { BG_COLOR } from "../../styled/Colors";
+import { BG_COLOR, BTN_BORDER, CHAMPAGNE_FADE } from "../../styled/Colors";
 import { H3, H5 } from "../../styled/Headings";
 import {
   LocationTextContainer,
@@ -11,6 +12,11 @@ import {
 import foodPlate from "./../../../assets/restaurant-plate-1.png";
 
 export const Location = () => {
+  const navigate = useNavigate();
+
+  const toBooking = () => {
+    navigate(`/booking`);
+  };
   return (
     <Wrapper
       height="100vh"
@@ -26,7 +32,14 @@ export const Location = () => {
           <H5>Contact@76gastronome.com</H5>
           <H5>0707 - 10 10 10</H5>
         </LocationTextContainer>
-        <Button>Boka bord</Button>
+        <Button
+          onClick={toBooking}
+          padding="20px"
+          fontSize="26px"
+          fontWeight="700"
+        >
+          Boka bord
+        </Button>
       </LocationTextWrapper>
     </Wrapper>
   );

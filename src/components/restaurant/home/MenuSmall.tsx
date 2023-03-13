@@ -11,7 +11,7 @@ import {
 } from "../../styled/Wrappers";
 import { SmallMenu, SmallMenuText } from "../../styled/SmallMenu";
 import { useNavigate } from "react-router-dom";
-import { BG_COLOR } from "../../styled/Colors";
+import { BG_COLOR, BTN_BORDER, CHAMPAGNE_FADE } from "../../styled/Colors";
 import { H2 } from "../../styled/Headings";
 import { Button } from "../../styled/Buttons";
 
@@ -40,7 +40,14 @@ export const MenuSmall = () => {
   let menuSmallHtml = menuSmall.map((menuSmall) => {
     return (
       <SmallMenu bgimage={menuSmall.image}>
-        <Button onClick={toMenus}>{menuSmall.name}</Button>
+        <Button
+          padding="20px"
+          fontSize="24px"
+          fontWeight="700"
+          onClick={toMenus}
+        >
+          {menuSmall.name}
+        </Button>
       </SmallMenu>
     );
   });

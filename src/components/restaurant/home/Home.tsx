@@ -26,7 +26,14 @@ export const Home = () => {
             <H1>Gastronome</H1>
           </HomeHeadingWrapper>
           <HomeButtonWrapper>
-            <HeroButton onClick={toBooking}>Boka bord</HeroButton>
+            <HeroButton
+              fontSize="40px"
+              padding="20px 40px"
+              fontWeight="500"
+              onClick={toBooking}
+            >
+              Boka bord
+            </HeroButton>
           </HomeButtonWrapper>
         </HeroWrapper>
       </Wrapper>

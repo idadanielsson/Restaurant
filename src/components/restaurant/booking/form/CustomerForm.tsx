@@ -1,6 +1,7 @@
 import { ChangeEvent, FormEvent, useContext } from "react";
 import { createBooking } from "../../../../services/RestaurantService";
-import { Button } from "../../../styled/Buttons";
+import { Button, Button1 } from "../../../styled/Buttons";
+import { CHAMPAGNE } from "../../../styled/Colors";
 import { BookingFormHeading } from "../../../styled/Headings";
 import { Input } from "../../../styled/Inputs";
 import {
@@ -42,12 +43,12 @@ export const CustomerForm = () => {
           <Input type="e-mail" onChange={handleChange} name="email"></Input>
         </InputWrapper>
         <BookTableButtonWrapper>
-          <Button height="50px" width="200px">
+          <Button1 height="50px" width="200px">
             Bekräfta Bokning
-          </Button>
-          <Button height="50px" width="200px">
+          </Button1>
+          <Button1 height="50px" width="200px">
             Avbryt bokning
-          </Button>
+          </Button1>
         </BookTableButtonWrapper>
       </FormWrapper>
     </BookingWrapper>
