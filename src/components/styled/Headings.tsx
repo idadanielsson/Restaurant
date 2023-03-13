@@ -18,7 +18,7 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
-  font-size: 60px;
+  font-size: ${(props: IHeadingsProps) => props.fontSize};
   font-family: "Cormorant Infant", serif;
   text-transform: uppercase;
   margin: 0px;
@@ -36,7 +36,7 @@ export const H3 = styled.h3`
 `;
 
 export const H5 = styled.h5`
-  font-size: 26px;
+  font-size: ${(props: IHeadingsProps) => props.fontSize};
   font-family: "Cormorant Infant", serif;
   margin: 0px;
   color: ${(props: IHeadingsProps) => props.color};
@@ -54,4 +54,8 @@ export const BookingFormHeading = styled(H5)`
   font-size: 25px;
   padding: 10px;
   color: ${FONT_COLOR};
+`;
+
+export const ContactHeading = styled(H5)`
+  text-align: center;
 `;

@@ -28,9 +28,9 @@ export const Location = () => {
       <LocationTextWrapper>
         <H3 width="49%">Upplev en utmärkt middag på 76 Gastronome</H3>
         <LocationTextContainer>
-          <H5>Nybrogatan 76, 114 39 Stockholm</H5>
-          <H5>Contact@76gastronome.com</H5>
-          <H5>0707 - 10 10 10</H5>
+          <H5 fontSize="26px">Nybrogatan 76, 114 39 Stockholm</H5>
+          <H5 fontSize="26px">Contact@76gastronome.com</H5>
+          <H5 fontSize="26px">0707 - 10 10 10</H5>
         </LocationTextContainer>
         <Button
           onClick={toBooking}

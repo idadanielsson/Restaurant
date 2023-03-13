@@ -8,14 +8,14 @@ import {
   FooterWrapper,
   Wrapper,
 } from "../styled/Wrappers";
-import { BG_COLOR, DARK_FONT_COLOR, FOOTER_COLOR } from "../styled/Colors";
+import { BG_COLOR, CHAMPAGNE, DARK_FONT_COLOR } from "../styled/Colors";
 import { H5 } from "../styled/Headings";
 
 export const Footer = () => {
   return (
     <Wrapper
       height="40vh"
-      bgcolor={FOOTER_COLOR}
+      bgcolor={CHAMPAGNE}
       display="flex"
       justify="center"
       align="center"
@@ -52,7 +52,7 @@ export const Footer = () => {
           </FooterIconLinks>
         </FooterContentWrapper>
         <FooterContentWrapper>
-          <H5 color={DARK_FONT_COLOR} width="30%">
+          <H5 fontSize="23px" color={DARK_FONT_COLOR} width="27%">
             Nybrogatan 76 114 39 Stockholm
           </H5>
         </FooterContentWrapper>

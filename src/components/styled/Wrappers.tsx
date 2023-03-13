@@ -1,5 +1,12 @@
 import styled from "styled-components";
-import { BG_COLOR, CHAMPAGNE, FONT_COLOR, DARK_FONT_COLOR } from "./Colors";
+import {
+  BG_COLOR,
+  CHAMPAGNE,
+  FONT_COLOR,
+  DARK_FONT_COLOR,
+  BG_COLOR_FADE,
+  ICON_SHADOW,
+} from "./Colors";
 
 export interface IRestaurantWrapperProps {
   height?: string;
@@ -133,10 +140,26 @@ export const FooterIconLinks = styled.a`
   color: ${DARK_FONT_COLOR};
   font-size: 50px;
   padding: 7px;
-  box-shadow: 0 0 5px #716153;
+  box-shadow: ${ICON_SHADOW};
   width: 50px;
   height: 50px;
 `;
+
+//CONTACT
+
+export const ContactTextWrapper = styled.div`
+  background-color: ${BG_COLOR_FADE};
+  color: ${FONT_COLOR};
+  width: 500px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+`;
+
+// BOOKING
 
 export const BookingWrapper = styled.div`
   height: 100vh;

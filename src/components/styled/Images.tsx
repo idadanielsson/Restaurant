@@ -3,6 +3,11 @@ import aboutIMage from "./../../assets/restaurant-pasta.png";
 
 export interface IImageProps {
   bgImage?: string;
+  display?: string;
+  direction?: string;
+  justify?: string;
+  align?: string;
+  gap?: string;
 }
 
 export const AboutImageWrapper = styled.div`
@@ -22,6 +27,11 @@ export const BackgroundImage = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(${(props: IImageProps) => props.bgImage});
+  display: ${(props: IImageProps) => props.display};
+  flex-direction: ${(props: IImageProps) => props.direction};
+  justify-content: ${(props: IImageProps) => props.justify};
+  align-items: ${(props: IImageProps) => props.align};
+  gap: ${(props: IImageProps) => props.gap}; ;
 `;
 
 export const HeroWrapper = styled(BackgroundImage)`
