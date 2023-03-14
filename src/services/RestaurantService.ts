@@ -39,3 +39,9 @@ export const customerId = async () => {
 
   return response.data;
 };
+
+export const deleteBooking = async (bookingId: string) => {
+  let response = await axios.delete(`${API}/booking/delete/${bookingId}`);
+
+  return response.data;
+};

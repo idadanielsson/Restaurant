@@ -16,9 +16,10 @@ import { BLUE, CHAMPAGNE } from "../../../styled/Colors";
 import { AdminContext } from "../Admin";
 import { getBookings } from "../../../../services/RestaurantService";
 import { IBookingResponse } from "../../../../models/IBookingResponse";
+import { Link } from "react-router-dom";
 
 export const AdminSearch = () => {
-  const { bookings, firstName, handleDate, formattedDate, getBookings } =
+  const { bookings, handleDate, formattedDate, getBookings } =
     useContext(AdminContext);
 
   return (
@@ -46,9 +47,12 @@ export const AdminSearch = () => {
         </TimesButton>
       </SearchTableTimesWrapper>
       <SearchTableButtonWrapper>
-        <Button1 onClick={getBookings} height="50px" width="200px">
-          Sök bord
-        </Button1>
+        <Link to="/admin/bookings">
+          {" "}
+          <Button1 onClick={getBookings} height="50px" width="200px">
+            Sök bord
+          </Button1>
+        </Link>
       </SearchTableButtonWrapper>
     </BookingWrapper>
   );

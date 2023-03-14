@@ -317,3 +317,22 @@ export const BookTableButtonWrapper = styled.div`
   justify-content: end;
   gap: 40px;
 `;
+
+export const AdminBookingWrapper = styled.div`
+  background-color: ${CHAMPAGNE};
+  padding: 10px;
+`;
+
+export const AdminBookingsWrapper = styled.div`
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding-top: 70px;
+  gap: 20px;
+  margin: 2rem;
+`;
+
+export const AdminBookingButtonsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+`;

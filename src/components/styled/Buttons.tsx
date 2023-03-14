@@ -65,3 +65,5 @@ export const Button = styled.button`
 export const HeroButton = styled(Button)`
   text-transform: uppercase;
 `;
+
+export const DeleteButton = styled(Button1)``;
