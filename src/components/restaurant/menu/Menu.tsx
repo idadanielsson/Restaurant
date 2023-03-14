@@ -1,25 +1,24 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { createContext } from "vm";
+
 import { IMenu, IMenus, menus } from "../../../models/IMenu";
-import { IMenuContext } from "../../../models/IMenuContext";
 
 import { MenuCategories } from "./menuCategories/MenuCategories";
 
-export const MenuContext = createContext<IMenuContext>({
-  theMenus: "",
-});
+export type MenuContext = { menus: IMenus[] };
 
 export const Menu = () => {
-  const [theMenus, setTheMenus] = useState("");
+  const [menus, setMenus] = useState<MenuContext>();
 
   return (
     <>
-      <MenuContext.Provider value={{ theMenus }}>
+      <div>
         <MenuCategories />
+      </div>
 
-        <Outlet></Outlet>
-      </MenuContext.Provider>
+      <div>
+        <Outlet context={{ menus }}></Outlet>
+      </div>
     </>
   );
 };

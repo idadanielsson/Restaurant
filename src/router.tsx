@@ -7,6 +7,7 @@ import { Home } from "./components/restaurant/home/Home";
 import { Menu } from "./components/restaurant/menu/Menu";
 import { MenuCategories } from "./components/restaurant/menu/menuCategories/MenuCategories";
 import { Menus } from "./components/restaurant/menu/menus/Menus";
+import { menus } from "./models/IMenu";
 
 export const router = createBrowserRouter([
   {
@@ -27,12 +28,7 @@ export const router = createBrowserRouter([
         element: <Menu />,
         children: [
           {
-            path: "/menu",
-            element: <MenuCategories />,
-            index: true,
-          },
-          {
-            path: "/menu:name",
+            path: "/menu:id",
             element: <Menus />,
           },
         ],
