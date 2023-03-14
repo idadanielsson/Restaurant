@@ -1,5 +1,6 @@
 import axios from "axios";
 import { IBooking } from "../models/IBooking";
+import { IBookingResponse } from "../models/IBookingResponse";
 
 export const restaurantID = `640f16b350c6ca4f37fce69d`;
 const API = `https://school-restaurant-api.azurewebsites.net`;
@@ -17,6 +18,12 @@ const API = `https://school-restaurant-api.azurewebsites.net`;
 // };
 
 export const getBookings = async () => {
+  let response = await axios.get(`${API}/booking/restaurant/${restaurantID}`);
+
+  return response.data;
+};
+
+export const getAdminBookings = async () => {
   let response = await axios.get(`${API}/booking/restaurant/${restaurantID}`);
 
   return response.data;

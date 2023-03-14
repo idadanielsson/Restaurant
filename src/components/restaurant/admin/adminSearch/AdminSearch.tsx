@@ -15,26 +15,18 @@ import { Calendar } from "react-calendar";
 import { BLUE, CHAMPAGNE } from "../../../styled/Colors";
 import { AdminContext } from "../Admin";
 import { getBookings } from "../../../../services/RestaurantService";
+import { IBookingResponse } from "../../../../models/IBookingResponse";
 
 export const AdminSearch = () => {
-  const { handleName, firstName, handleDate, formattedDate } =
+  const { bookings, firstName, handleDate, formattedDate, getBookings } =
     useContext(AdminContext);
-
-  //   const [searchBooking, setSearchBooking] = useState<IBooking>();
-
-  const handleTime = () => {};
-
-  const getBookings = async () => {
-    const bookings = await getBookings();
-    console.log(bookings);
-  };
 
   return (
     <BookingWrapper>
       <FormWrapper>
         <InputWrapper>
           <BookingFormHeading>Förnamn</BookingFormHeading>
-          <Input onChange={handleName} type="text" name="name"></Input>
+          <Input type="text" name="name"></Input>
         </InputWrapper>
         <InputWrapper>
           <BookingFormHeading>Efternamn</BookingFormHeading>

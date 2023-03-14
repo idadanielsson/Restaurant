@@ -1,8 +1,10 @@
 import { ChangeEvent } from "react";
+import { IBookingResponse } from "./IBookingResponse";
 
 export interface IAdminContext {
   firstName: string;
-  handleName(e: ChangeEvent<HTMLInputElement>): void;
   handleDate(date: Date): void;
   formattedDate: string;
+  bookings: IBookingResponse[];
+  getBookings(): void;
 }

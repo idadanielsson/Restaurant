@@ -2,23 +2,42 @@ import { ChangeEvent, createContext, useContext, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { IAdminContext } from "../../../models/IAdminContext";
 import { IBooking } from "../../../models/IBooking";
+import { IBookingResponse } from "../../../models/IBookingResponse";
+import { getAdminBookings } from "../../../services/RestaurantService";
 import { BookingContext } from "../booking/Booking";
 
 export const AdminContext = createContext<IAdminContext>({
-  handleName: () => {},
   formattedDate: "",
   firstName: "",
   handleDate: () => {},
+  getBookings: () => {},
+  bookings: [
+    {
+      id: "",
+      restaurantId: "",
+      date: "",
+      time: "",
+      numberOfGuests: 0,
+      customerId: "",
+    },
+  ],
 });
 
 export const Admin = () => {
   const [firstName, setFirstName] = useState("");
   const [selectedBookings, setSelectedBookings] = useState<IBooking[]>([]);
   const [formattedDate, setFormattedDate] = useState("");
+  const [bookings, setBookings] = useState<IBookingResponse[]>([]);
 
-  const handleName = (e: ChangeEvent<HTMLInputElement>) => {
-    setFirstName(e.target.value);
+  const getBookings = async () => {
+    let bookings = await getAdminBookings();
+    console.log(bookings);
+
+    let copy = [...bookings];
+    copy = bookings;
+    setBookings(copy);
   };
+  console.log(bookings);
 
   const handleDate = (date: Date) => {
     const year = date.getFullYear();
@@ -32,7 +51,13 @@ export const Admin = () => {
   return (
     <>
       <AdminContext.Provider
-        value={{ handleName, firstName, formattedDate, handleDate }}
+        value={{
+          bookings,
+          firstName,
+          formattedDate,
+          handleDate,
+          getBookings,
+        }}
       >
         <Outlet />
       </AdminContext.Provider>
