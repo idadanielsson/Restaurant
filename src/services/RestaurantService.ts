@@ -26,3 +26,9 @@ export const createBooking = async (booking: IBooking) => {
   let response = await axios.post(`${API}/booking/create`, booking);
   return response.data;
 };
+
+export const customerId = async () => {
+  let response = await axios.get(`${API}/customer/${restaurantID}`);
+
+  return response.data;
+};

@@ -2,6 +2,7 @@ import { createBrowserRouter, Form } from "react-router-dom";
 import App from "./App";
 import { Contact } from "./components/contact/Contaxt";
 import { Admin } from "./components/restaurant/admin/Admin";
+import { AdminSearch } from "./components/restaurant/admin/adminSearch/AdminSearch";
 import { Booking } from "./components/restaurant/booking/Booking";
 import { CustomerForm } from "./components/restaurant/booking/form/CustomerForm";
 import { TableSearch } from "./components/restaurant/booking/tableSearch/TableSearch";
@@ -46,6 +47,13 @@ export const router = createBrowserRouter([
       {
         path: "/admin",
         element: <Admin />,
+        children: [
+          {
+            path: "/admin",
+            element: <AdminSearch />,
+            index: true,
+          },
+        ],
       },
       {
         path: "/contact",
