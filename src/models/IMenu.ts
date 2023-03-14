@@ -1,3 +1,5 @@
+import { createContext } from "react";
+
 export interface IMenu {
   name: string;
   category: number;
@@ -10,7 +12,7 @@ export interface IMenus {
   menus: IMenu[];
 }
 
-export const MenuList: IMenus = {
+export const menus: IMenus = {
   menus: [
     {
       name: "Pasta",
