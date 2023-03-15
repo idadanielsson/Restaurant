@@ -56,3 +56,15 @@ export const SmallMenuWrapper = styled.div`
   display: grid;
   display: flex;
 `;
+
+export const MenuCategoryWrapper = styled.div`
+  width: 50%;
+  padding: 40px;
+`;
+
+export const MenuBigWrapper = styled.div`
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;

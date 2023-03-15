@@ -1,15 +1,14 @@
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 
-import { IMenu, IMenus, menus } from "../../../models/IMenu";
+import { IMenu, menus } from "../../../models/IMenu";
+import { H5 } from "../../styled/Headings";
 
 import { MenuCategories } from "./menuCategories/MenuCategories";
 
-export type MenuContext = { menus: IMenus[] };
+export type MenuContext = { menus: IMenu[] };
 
 export const Menu = () => {
-  const [menus, setMenus] = useState<MenuContext>();
-
   return (
     <>
       <div>

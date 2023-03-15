@@ -1,20 +1,23 @@
-import { useState } from "react";
-import { useOutletContext } from "react-router-dom";
-import { IMenus, menus } from "../../../../models/IMenu";
-
+import { useParams } from "react-router-dom";
+import { menus } from "../../../../models/IMenu";
 import { H5 } from "../../../styled/Headings";
-import { MenuContext } from "../Menu";
-import { MenuItem } from "../menuItem/MenuItem";
+import { ItemTitle } from "../../../styled/MenuItem";
+import { MenuBigWrapper } from "../../../styled/Wrappers";
 
 export const Menus = () => {
-  const [theMenus, setTheMenus] = useState<IMenus>();
+  const { id } = useParams();
+  let newId = Number(id);
 
-  let menusHtml = menus.menus.map((m) => {
-    return (
+  const menuHtml = menus
+    .filter((m) => m.categoryId === newId)
+    .map((m) => (
       <>
-        <MenuItem key={m.id} menu={m}></MenuItem>
+        <MenuBigWrapper>
+          <ItemTitle>{m.name}</ItemTitle>
+          <p>{m.price}</p>
+          <p>{m.description}</p>
+        </MenuBigWrapper>
       </>
-    );
-  });
-  return <>{menusHtml}</>;
+    ));
+  return <>{menuHtml}</>;
 };
