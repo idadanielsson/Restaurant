@@ -1,6 +1,6 @@
 import { IBookingResponse } from "../../../../models/IBookingResponse";
 import { deleteBooking } from "../../../../services/RestaurantService";
-import { DeleteButton } from "../../../styled/Buttons";
+import { Button, DeleteButton } from "../../../styled/Buttons";
 import { AdminBookingParagraph } from "../../../styled/Paragraphs";
 import {
   AdminBookingButtonsWrapper,
@@ -8,15 +8,26 @@ import {
 } from "../../../styled/Wrappers";
 
 import { RxCross1 } from "react-icons/rx";
+import { HiOutlinePencil } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
 
 interface IAdminBookingProps {
   booking: IBookingResponse;
-  getBookings(): void;
+  getAdminBookings(): void;
+  removeBooking(b: string): void;
 }
 
 export const AdminBooking = (props: IAdminBookingProps) => {
-  const handleDelete = (id: string) => {
-    deleteBooking(id);
+  const navigate = useNavigate();
+  const handleDelete = async (id: string) => {
+    let removedBooking = await deleteBooking(id);
+    if (removedBooking) {
+      props.removeBooking(id);
+    }
+  };
+
+  const handleEdit = (id: string) => {
+    navigate(`/admin/edit/${id}`);
   };
 
   return (
@@ -36,11 +47,18 @@ export const AdminBooking = (props: IAdminBookingProps) => {
         <DeleteButton
           onClick={() => {
             handleDelete(props.booking._id);
-            props.getBookings();
+            props.getAdminBookings();
           }}
         >
           <RxCross1 fontSize="25px" color="red" />
         </DeleteButton>
+        <Button
+          onClick={() => {
+            handleEdit(props.booking._id);
+          }}
+        >
+          <HiOutlinePencil color="yellow" fontSize="25px" />
+        </Button>
       </AdminBookingButtonsWrapper>
     </AdminBookingWrapper>
   );

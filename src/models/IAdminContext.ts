@@ -5,5 +5,6 @@ export interface IAdminContext {
   handleDate(date: Date): void;
   formattedDate: string;
   bookings: IBookingResponse[];
-  getBookings(): void;
+  getAdminBookings(): void;
+  removeBooking(b: string): void;
 }

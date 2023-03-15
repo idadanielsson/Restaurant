@@ -7,3 +7,5 @@ export const AdminBookingParagraph = styled.p`
   font-size: 18px;
   font-weight: 700;
 `;
+
+export const EditBookingParagraph = styled(AdminBookingParagraph)``;

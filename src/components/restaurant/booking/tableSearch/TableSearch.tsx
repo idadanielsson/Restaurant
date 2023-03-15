@@ -12,9 +12,10 @@ import { Button, Button1, TimesButton } from "../../../styled/Buttons";
 import { useContext } from "react";
 import { BookingContext } from "../Booking";
 import { BLUE, CHAMPAGNE, FONT_COLOR } from "../../../styled/Colors";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getBookings } from "../../../../services/RestaurantService";
 import { IBooking } from "../../../../models/IBooking";
+import swal from "sweetalert";
 export const TableSearch = () => {
   const { handleAmountOfGuests, handleTime, handleDate, booking } =
     useContext(BookingContext);
@@ -24,20 +25,24 @@ export const TableSearch = () => {
   let navigate = useNavigate();
 
   const searchTable = async () => {
-    let allBookings = await getBookings();
+    if (booking.time && booking.date && booking.numberOfGuests) {
+      let allBookings: IBooking[] = await getBookings();
 
-    let selectedBookings = allBookings.filter((b: IBooking) => {
-      if (b.time === booking.time) if (b.date === booking.date) return b;
-    });
+      let selectedBookings = allBookings.filter((b: IBooking) => {
+        if (b.time === booking.time) if (b.date === booking.date) return b;
+      });
 
-    let availableTables = 15 - selectedBookings.length;
+      let availableTables = 15 - selectedBookings.length;
 
-    console.log(availableTables);
+      console.log(availableTables);
 
-    if (availableTables > 0) {
-      navigate(`/booking/form`);
+      if (availableTables > 0) {
+        navigate(`/booking/form`);
+      } else {
+        swal("Det finns inga lediga bord på din valda tid");
+      }
     } else {
-      alert("Det finns inga lediga bord");
+      swal("Fyll i datum, tid och antal gäster");
     }
   };
 

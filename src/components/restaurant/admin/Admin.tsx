@@ -1,14 +1,14 @@
-import { ChangeEvent, createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { IAdminContext } from "../../../models/IAdminContext";
 import { IBookingResponse } from "../../../models/IBookingResponse";
-import { getAdminBookings } from "../../../services/RestaurantService";
+import { getBookings } from "../../../services/RestaurantService";
 
 export const AdminContext = createContext<IAdminContext>({
   formattedDate: "",
-
+  removeBooking: () => {},
   handleDate: () => {},
-  getBookings: () => {},
+  getAdminBookings: () => {},
   bookings: [
     {
       _id: "",
@@ -25,12 +25,19 @@ export const Admin = () => {
   const [formattedDate, setFormattedDate] = useState("");
   const [bookings, setBookings] = useState<IBookingResponse[]>([]);
 
-  const [filteredBookings, setFilteredBookings] = useState<IBookingResponse[]>(
-    []
-  );
+  const removeBooking = (b: string) => {
+    let copy = [...bookings];
+    let newCopy = copy.filter((c) => {
+      if (b != c._id) {
+        return c;
+      }
+    });
 
-  const getBookings = async () => {
-    let bookings = await getAdminBookings();
+    setBookings(newCopy);
+  };
+
+  const getAdminBookings = async () => {
+    let bookings = await getBookings();
     console.log(bookings);
 
     let copy = [...bookings];
@@ -59,11 +66,12 @@ export const Admin = () => {
     <>
       <AdminContext.Provider
         value={{
+          removeBooking,
           bookings,
 
           formattedDate,
           handleDate,
-          getBookings,
+          getAdminBookings,
         }}
       >
         <Outlet />
