@@ -1,5 +1,3 @@
 export const BookingConfirm = () => {
-    return(
-        <>BookingConfirm</>
-    )
-}
+  return <>Tack för din bokning</>;
+};

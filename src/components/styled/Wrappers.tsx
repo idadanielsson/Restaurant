@@ -263,7 +263,7 @@ export const AmountOfGuestsWrapper = styled.div`
   display: flex;
   margin-bottom: 40px;
   margin-bottom: 30px;
-  justify-content: space-between;
+  gap: 10px;
 `;
 
 export const AmountOfGuestsCard = styled.div`
@@ -317,6 +317,25 @@ export const BookTableButtonWrapper = styled.div`
   display: flex;
   justify-content: end;
   gap: 40px;
+`;
+
+export const AdminBookingWrapper = styled.div`
+  background-color: ${CHAMPAGNE};
+  padding: 10px;
+`;
+
+export const AdminBookingsWrapper = styled.div`
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding-top: 70px;
+  gap: 20px;
+  margin: 2rem;
+`;
+
+export const AdminBookingButtonsWrapper = styled.div`
+  width: 100%;
+  display: flex;
 `;
 
 export const HamburgerWrapper = styled.div`
