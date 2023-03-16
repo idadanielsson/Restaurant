@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoint } from "./Breakpoints";
 import {
   BG_COLOR,
   CHAMPAGNE,
@@ -316,4 +317,12 @@ export const BookTableButtonWrapper = styled.div`
   display: flex;
   justify-content: end;
   gap: 40px;
+`;
+
+export const HamburgerWrapper = styled.div`
+  position: absolute;
+  z-index: 2;
+  @media ${breakpoint.mobile} {
+    display: none;
+  }
 `;

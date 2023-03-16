@@ -10,7 +10,6 @@ function App() {
     <>
       <BackgroundWrapper>
         <header>
-          <HamburgerMenu></HamburgerMenu>
           <Nav></Nav>
         </header>
         <main>

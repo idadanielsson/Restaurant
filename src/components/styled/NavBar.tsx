@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { breakpoint } from "./Breakpoints";
 import { BG_COLOR } from "./Colors";
 
 export interface INavProps {
@@ -24,6 +25,7 @@ export const NavBar = styled.nav`
 export const NavList = styled.ul`
   display: flex;
   justify-content: ${(props: INavProps) => props.justify};
+
   margin: 0px;
   margin-right: ${(props: INavProps) => props.marginRight};
 `;
@@ -34,6 +36,10 @@ export const NavItem = styled.li`
   gap: ${(props: INavProps) => props.gap};
   font-size: ${(props: INavProps) => props.fontSize};
   font-weight: 500;
+
+  @media ${breakpoint.mobileMenu} {
+    flex-direction: ${(props: INavProps) => props.direction};
+  }
 `;
 
 export const NavLink = styled(Link)`

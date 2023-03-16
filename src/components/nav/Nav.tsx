@@ -1,12 +1,45 @@
 import { FONT_COLOR } from "../styled/Colors";
-import { NavBar, NavItem, NavLink, NavList } from "../styled/NavBar";
+import { NavItem, NavLink, NavList } from "../styled/NavBar";
+import { HamburgerWrapper } from "../styled/Wrappers";
+import { Spin as Hamburger } from "hamburger-react";
+import { useState } from "react";
+import "./nav.css";
 
 export const Nav = () => {
+  const [isOpen, setOpen] = useState(Boolean);
+  const onClick = () => {
+    setOpen(!isOpen);
+    console.log(isOpen);
+  };
+
   return (
     <>
-      <NavBar position="absolute" Zindex="1">
+      <HamburgerWrapper onClick={onClick}>
+        <Hamburger
+          toggled={isOpen}
+          toggle={setOpen}
+          size={20}
+          direction="left"
+          duration={0.3}
+          distance="lg"
+          color={FONT_COLOR}
+          easing="ease-in"
+          onToggle={(toggled: any) => {
+            if (toggled) {
+              setOpen(true);
+            } else {
+              setOpen(false);
+            }
+          }}
+          rounded
+          label="Show menu"
+          hideOutline={false}
+        ></Hamburger>
+      </HamburgerWrapper>
+
+      <div className={isOpen ? "navActive" : "nav"}>
         <NavList justify="end" marginRight="30px">
-          <NavItem gap="20px" fontSize="25px">
+          <NavItem direction="column" gap="20px" fontSize="25px">
             <NavLink color={FONT_COLOR} to="/">
               Hem
             </NavLink>
@@ -21,7 +54,7 @@ export const Nav = () => {
             </NavLink>
           </NavItem>
         </NavList>
-      </NavBar>
+      </div>
     </>
   );
 };

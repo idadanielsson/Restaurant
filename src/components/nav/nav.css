@@ -1,0 +1,23 @@
+.nav {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
+
+.navActive {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .navActive {
+    background-color: rgba(44, 45, 52, 0.743);
+    width: 200px;
+  }
+}
