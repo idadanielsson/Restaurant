@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoint } from "./Breakpoints";
 import {
   BG_COLOR,
   BTN_BORDER,
@@ -60,10 +61,18 @@ export const Button = styled.button`
   :hover {
     background-color: #ab947e;
   }
+
+  @media ${breakpoint.mobileMenu} {
+    padding: 15px;
+  }
 `;
 
 export const HeroButton = styled(Button)`
   text-transform: uppercase;
+
+  @media ${breakpoint.mobileMenu} {
+    font-size: 20px;
+  }
 `;
 
 export const DeleteButton = styled(Button1)``;

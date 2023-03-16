@@ -31,6 +31,10 @@ export const Wrapper = styled.div`
   justify-content: ${(props: IRestaurantWrapperProps) => props.justify};
   align-items: ${(props: IRestaurantWrapperProps) => props.align};
   background-color: ${(props: IRestaurantWrapperProps) => props.bgcolor};
+
+  @media ${breakpoint.mobileMenu} {
+    height: 80vh;
+  }
 `;
 
 // HOME
@@ -46,21 +50,30 @@ export const BackgroundWrapper = styled.div`
 export const HomeHeadingWrapper = styled.div`
   margin-top: 55px;
   margin-left: 150px;
+
+  @media ${breakpoint.mobileMenu} {
+    margin-left: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 `;
+
+export const AboutHomeWrapper = styled.div``;
 
 export const HomeButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 150px;
+
+  @media ${breakpoint.mobileMenu} {
+    margin-top: 0;
+  }
 `;
 
 // ABOUT
-
-export const AboutWrapper = styled.div`
-  height: 100vh;
-  width: 100%;
-  position: relative;
-`;
 
 export const AboutTextWrapper = styled.div`
   display: flex;
@@ -71,15 +84,41 @@ export const AboutTextWrapper = styled.div`
   margin-top: 40px;
   position: relative;
   background-color: ${BG_COLOR};
+
+  @media ${breakpoint.mobileMenu} {
+    flex-direction: column;
+    justify-content: center;
+    height: 30vh;
+    gap: 40px;
+    margin-top: 10px;
+  }
 `;
 
 // MENU
+
+export const MenuSmallWrapper = styled.div``;
 
 export const SmallMenuWrapper = styled.div`
   width: 100%;
   height: ${(props: IRestaurantWrapperProps) => props.height};
   display: flex;
   background-color: ${(props: IRestaurantWrapperProps) => props.bgcolor};
+
+  @media ${breakpoint.mobileMenu} {
+    height: 100vh;
+    flex-direction: column;
+  }
+`;
+
+export const SmallMenuTextWrapper = styled.div`
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  background-color: ${BG_COLOR};
+
+  @media ${breakpoint.mobileMenu} {
+    height: 20vh;
+  }
 `;
 
 export const SmallMenuTitleWrapper = styled.div`
@@ -92,11 +131,28 @@ export const SmallMenuTitleWrapper = styled.div`
 // LOCATION
 
 export const LocationWrapper = styled.div`
+  height: 100vh;
+  background-color: ${BG_COLOR};
+  display: flex;
+  flex-direction: row-reverse;
+
+  @media ${breakpoint.mobileMenu} {
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+`;
+
+export const LocationImageWrapper = styled.div`
   background-image: url(${(props: IRestaurantWrapperProps) => props.bgimage});
   background-position: center;
   background-size: cover;
   width: 50%;
   height: 100%;
+
+  @media ${breakpoint.mobileMenu} {
+    width: 100%;
+    height: 50vh;
+  }
 `;
 
 export const LocationTextWrapper = styled.div`
@@ -107,6 +163,12 @@ export const LocationTextWrapper = styled.div`
   align-items: center;
   text-align: center;
   gap: 100px;
+
+  @media ${breakpoint.mobileMenu} {
+    width: 100%;
+    gap: 50px;
+    margin: 2rem 0px;
+  }
 `;
 
 export const LocationTextContainer = styled.div`
@@ -114,6 +176,11 @@ export const LocationTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   color: ${FONT_COLOR};
+
+  @media ${breakpoint.mobileMenu} {
+    width: 100%;
+    align-items: center;
+  }
 `;
 
 export const LocationBTNContainer = styled.div`
@@ -125,6 +192,18 @@ export const LocationBTNContainer = styled.div`
 // FOOTER
 
 export const FooterWrapper = styled.div`
+  height: 40vh;
+  background-color: ${CHAMPAGNE};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media ${breakpoint.mobileMenu} {
+    height: 30vh;
+  }
+`;
+
+export const FooterContainerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;

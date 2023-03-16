@@ -16,6 +16,12 @@ export interface INavProps {
   marginRight?: string;
 }
 
+export const NavBarContainer = styled.div`
+  @media ${breakpoint.mobileMenu} {
+    display: none;
+  }
+`;
+
 export const NavBar = styled.nav`
   width: 100%;
   position: ${(props: INavProps) => props.position};
