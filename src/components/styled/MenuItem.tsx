@@ -9,7 +9,6 @@ export const MenuListWrapper = styled.ul`
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  margin-top: 80px;
 `;
 
 export const MenuItemWrapper = styled.li`

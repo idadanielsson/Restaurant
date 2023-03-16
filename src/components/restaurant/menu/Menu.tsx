@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { IMenu, menus } from "../../../models/IMenu";
+import { H2, H5 } from "../../styled/Headings";
 import { MenuListWrapper } from "../../styled/MenuItem";
 import {
   BigMenuWrapper,
@@ -13,14 +14,17 @@ export type MenuContext = { menus: IMenu[] };
 
 export const Menu = () => {
   return (
-    <BigMenuWrapper>
-      <MenuCategoryWrapper>
-        <MenuCategories />
-      </MenuCategoryWrapper>
+    <Wrapper width="100%" height="100%">
+      <H5>Vår meny</H5>
+      <BigMenuWrapper>
+        <MenuCategoryWrapper>
+          <MenuCategories />
+        </MenuCategoryWrapper>
 
-      <MenuListWrapper>
-        <Outlet context={{ menus }}></Outlet>
-      </MenuListWrapper>
-    </BigMenuWrapper>
+        <MenuListWrapper>
+          <Outlet context={{ menus }}></Outlet>
+        </MenuListWrapper>
+      </BigMenuWrapper>
+    </Wrapper>
   );
 };

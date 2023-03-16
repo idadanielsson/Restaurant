@@ -19,7 +19,7 @@ export const categories: IMenuCategories = {
     },
     {
       id: 3,
-      name: "Drinks & Wine",
+      name: "Wine & Drinks",
     },
   ],
 };
