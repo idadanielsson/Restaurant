@@ -7,12 +7,12 @@ import {
   SearchTableTimesWrapper,
 } from "../../../styled/Wrappers";
 import Calendar from "react-calendar";
-import { AmountOfGuestsHeading, H5 } from "../../../styled/Headings";
-import { Button, Button1, TimesButton } from "../../../styled/Buttons";
+import { AmountOfGuestsHeading } from "../../../styled/Headings";
+import { Button1, TimesButton } from "../../../styled/Buttons";
 import { useContext } from "react";
 import { BookingContext } from "../Booking";
 import { BLUE, CHAMPAGNE, FONT_COLOR } from "../../../styled/Colors";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { getBookings } from "../../../../services/RestaurantService";
 import { IBooking } from "../../../../models/IBooking";
 import swal from "sweetalert";
@@ -42,7 +42,7 @@ export const TableSearch = () => {
         swal("Det finns inga lediga bord på din valda tid");
       }
     } else {
-      swal("Fyll i datum, tid och antal gäster");
+      swal("Försök igen", "Fyll i datum, tid och antal gäster", "error");
     }
   };
 

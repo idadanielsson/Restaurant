@@ -24,7 +24,7 @@ export const CustomerForm = () => {
           createBooking(booking);
           console.log("hej");
           localStorage.removeItem("booking");
-          swal("Tack för din bokning!");
+          swal("Tack för din bokning!", "", "success");
         }}
       >
         <InputWrapper>

@@ -10,8 +10,7 @@ import { AdminContext } from "../Admin";
 import { Link } from "react-router-dom";
 
 export const AdminSearch = () => {
-  const { bookings, handleDate, formattedDate, getAdminBookings } =
-    useContext(AdminContext);
+  const { handleDate, getAdminBookings } = useContext(AdminContext);
 
   return (
     <BookingWrapper>
