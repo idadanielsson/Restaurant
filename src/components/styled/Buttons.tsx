@@ -12,6 +12,7 @@ export interface IButtonProps {
   height?: string;
   width?: string;
   padding?: string;
+  margin?: string;
   bgcolor?: string;
   color?: string;
   border?: string;
@@ -28,7 +29,8 @@ export const Button1 = styled.button`
   height: ${(props: IButtonProps) => props.height};
   width: ${(props: IButtonProps) => props.width};
   padding: ${(props: IButtonProps) => props.padding};
-  font-weight: 700;
+  margin: ${(props: IButtonProps) => props.margin};
+
   font-size: large;
   cursor: pointer;
   @media ${breakpoint.mobileMenu} {
@@ -62,10 +64,16 @@ export const Button = styled.button`
   font-size: ${(props: IButtonProps) => props.fontSize};
   transition: all ease 0.2s;
   font-weight: ${(props: IButtonProps) => props.fontWeight};
+  margin: ${(props: IButtonProps) => props.margin};
   cursor: pointer;
 
   :hover {
     background-color: #ab947e;
+  }
+
+  @media ${breakpoint.mobileMenu} {
+    padding: 5px 15px;
+    font-size: 22px;
   }
 `;
 

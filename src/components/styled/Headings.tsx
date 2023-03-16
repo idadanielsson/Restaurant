@@ -67,18 +67,6 @@ export const ContactHeading = styled(H5)`
   text-align: center;
 `;
 
-export const H6 = styled.button`
-  color: ${CHAMPAGNE};
-  font-family: "Cormorant Infant", serif;
-  font-size: 34px;
-  font-weight: 300;
-  background-color: ${CHAMPAGNE};
-  color: ${FONT_COLOR};
-  padding: 5px 10px;
-  cursor: pointer;
-  border: none;
-`;
-
 export const ItemTitle = styled.h6`
   font-size: 22px;
   font-family: "Cormorant Infant", serif;
@@ -86,4 +74,23 @@ export const ItemTitle = styled.h6`
   text-transform: uppercase;
   color: ${FONT_COLOR};
   margin: 0;
+
+  @media ${breakpoint.mobileMenu} {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+`;
+
+export const MenuHeading = styled.h2`
+  font-size: 36px;
+  font-family: "Cormorant Infant", serif;
+  text-transform: uppercase;
+  padding: 60px;
+  font-weight: 300;
+  color: ${CHAMPAGNE};
+  text-decoration: underline 1px;
+
+  @media ${breakpoint.mobileMenu} {
+    padding: 20px 0;
+  }
 `;

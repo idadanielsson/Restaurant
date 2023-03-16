@@ -13,7 +13,7 @@ import { TableTimes } from "./components/restaurant/booking/tableTimes/TableTime
 import { Home } from "./components/restaurant/home/Home";
 import { Menu } from "./components/restaurant/menu/Menu";
 
-import { MenuList } from "./components/restaurant/menu/menus/MenuList";
+import { MenuList } from "./components/restaurant/menu/menuList/MenuList";
 
 export const router = createBrowserRouter([
   {
