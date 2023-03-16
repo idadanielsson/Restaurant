@@ -5,9 +5,8 @@ import { Admin } from "./components/restaurant/admin/Admin";
 import { Booking } from "./components/restaurant/booking/Booking";
 import { Home } from "./components/restaurant/home/Home";
 import { Menu } from "./components/restaurant/menu/Menu";
-import { MenuCategories } from "./components/restaurant/menu/menuCategories/MenuCategories";
-import { Menus } from "./components/restaurant/menu/menus/Menus";
-import { menus } from "./models/IMenu";
+
+import { MenuList } from "./components/restaurant/menu/menus/MenuList";
 
 export const router = createBrowserRouter([
   {
@@ -29,7 +28,7 @@ export const router = createBrowserRouter([
         children: [
           {
             path: "/menu:id",
-            element: <Menus />,
+            element: <MenuList />,
           },
         ],
       },

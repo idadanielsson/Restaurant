@@ -2,8 +2,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IMenu, menus } from "../../../../models/IMenu";
 import { categories } from "../../../../models/IMenuCategory";
-import { H5 } from "../../../styled/Headings";
-import { MenuBigWrapper, MenuCategoryWrapper } from "../../../styled/Wrappers";
+import { H5, H6 } from "../../../styled/Headings";
+import {
+  MenuCategoryItemWrapper,
+  MenuCategoryWrapper,
+} from "../../../styled/Wrappers";
 
 export const MenuCategories = () => {
   const navigate = useNavigate();
@@ -13,18 +16,16 @@ export const MenuCategories = () => {
     console.log(menus);
   };
 
-  const categoryHtml = categories.categories.map((c, i: number) => {
+  const categoryHtml = categories.categories.map((c) => {
     return (
       <>
-        <MenuCategoryWrapper>
-          <H5
-            onClick={() => {
-              showMenu(c.id);
-            }}
-          >
-            {c.name}
-          </H5>
-        </MenuCategoryWrapper>
+        <H6
+          onClick={() => {
+            showMenu(c.id);
+          }}
+        >
+          {c.name}
+        </H6>
       </>
     );
   });

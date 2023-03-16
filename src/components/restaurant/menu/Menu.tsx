@@ -1,23 +1,26 @@
-import { useState } from "react";
-import { Outlet, useParams } from "react-router-dom";
-
+import { Outlet } from "react-router-dom";
 import { IMenu, menus } from "../../../models/IMenu";
-import { H5 } from "../../styled/Headings";
-
+import { MenuListWrapper } from "../../styled/MenuItem";
+import {
+  BigMenuWrapper,
+  MenuCategoryItemWrapper,
+  MenuCategoryWrapper,
+  Wrapper,
+} from "../../styled/Wrappers";
 import { MenuCategories } from "./menuCategories/MenuCategories";
 
 export type MenuContext = { menus: IMenu[] };
 
 export const Menu = () => {
   return (
-    <>
-      <div>
+    <BigMenuWrapper>
+      <MenuCategoryWrapper>
         <MenuCategories />
-      </div>
+      </MenuCategoryWrapper>
 
-      <div>
+      <MenuListWrapper>
         <Outlet context={{ menus }}></Outlet>
-      </div>
-    </>
+      </MenuListWrapper>
+    </BigMenuWrapper>
   );
 };

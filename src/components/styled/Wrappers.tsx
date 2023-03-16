@@ -57,14 +57,22 @@ export const SmallMenuWrapper = styled.div`
   display: flex;
 `;
 
-export const MenuCategoryWrapper = styled.div`
-  width: 50%;
-  padding: 40px;
-`;
-
-export const MenuBigWrapper = styled.div`
-  width: 60%;
+export const BigMenuWrapper = styled.div`
+  width: 100%;
+  height: 90vh;
   display: flex;
   justify-content: center;
+  padding-top: 60px;
+`;
+
+export const MenuCategoryWrapper = styled.div`
+  height: 250px;
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  margin-top: 80px;
+`;
+
+export const MenuCategoryItemWrapper = styled.div`
+  width: 30%;
 `;
