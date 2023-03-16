@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { breakpoint } from "./Breakpoints";
-import { CHAMPAGNE, FONT_COLOR } from "./Colors";
+import { FONT_COLOR } from "./Colors";
 
 export const MenuListWrapper = styled.ul`
   width: 50%;
@@ -19,7 +19,7 @@ export const MenuListWrapper = styled.ul`
 
 export const MenuItemWrapper = styled.li`
   padding-bottom: 20px;
-  margin-left: 80px;
+  margin-left: 21%;
 
   @media ${breakpoint.mobileMenu} {
     margin: 0;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { menus } from "../../../../models/IMenu";
 import { categories } from "../../../../models/IMenuCategory";
-import { Button } from "../../../styled/Buttons";
+import { Button, Button1 } from "../../../styled/Buttons";
 import { BLUE, CHAMPAGNE } from "../../../styled/Colors";
 
 export const MenuCategories = () => {
@@ -23,8 +23,8 @@ export const MenuCategories = () => {
       <>
         <Button
           margin="12px"
-          padding="7px 20px"
-          fontSize="28px"
+          padding="10px 40px"
+          fontSize="24px"
           bgcolor={backgroundColor === c.name ? BLUE : CHAMPAGNE}
           onClick={() => {
             showMenu(c.id);

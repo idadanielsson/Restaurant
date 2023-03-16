@@ -76,12 +76,13 @@ export const ItemTitle = styled.h6`
 `;
 
 export const MenuHeading = styled.h2`
-  font-size: ${(props: IHeadingsProps) => props.fontSize};
+  font-size: 36px;
   font-family: "Cormorant Infant", serif;
   text-transform: uppercase;
   padding: 60px;
   font-weight: 300;
-  color: ${FONT_COLOR};
+  color: ${CHAMPAGNE};
+  text-decoration: underline 1px;
 
   @media ${breakpoint.mobileMenu} {
     padding: 20px 0;
