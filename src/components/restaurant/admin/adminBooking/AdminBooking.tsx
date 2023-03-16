@@ -1,6 +1,11 @@
 import { IBookingResponse } from "../../../../models/IBookingResponse";
 import { deleteBooking } from "../../../../services/RestaurantService";
-import { Button, Button1, DeleteButton } from "../../../styled/Buttons";
+import {
+  Button,
+  Button1,
+  DeleteButton,
+  EditButton,
+} from "../../../styled/Buttons";
 import { AdminBookingParagraph } from "../../../styled/Paragraphs";
 import {
   AdminBookingButtonsWrapper,
@@ -52,13 +57,13 @@ export const AdminBooking = (props: IAdminBookingProps) => {
         >
           <RxCross1 fontSize="25px" color="red" />
         </DeleteButton>
-        <Button1
+        <EditButton
           onClick={() => {
             handleEdit(props.booking._id);
           }}
         >
           <FiEdit color="yellow" fontSize="25px" />
-        </Button1>
+        </EditButton>
       </AdminBookingButtonsWrapper>
     </AdminBookingWrapper>
   );

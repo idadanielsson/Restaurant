@@ -68,14 +68,10 @@ export const CustomerForm = () => {
           ></Input>
         </InputWrapper>
         <BookTableButtonWrapper>
-          <Button1 height="50px" width="200px">
-            Bekräfta Bokning
-          </Button1>
+          <Button1 padding="10px 50px">Bekräfta Bokning</Button1>
 
           <Link to="/">
-            <Button1 height="50px" width="200px">
-              Avbryt bokning
-            </Button1>
+            <Button1 padding="10px 50px">Avbryt bokning</Button1>
           </Link>
         </BookTableButtonWrapper>
       </FormWrapper>

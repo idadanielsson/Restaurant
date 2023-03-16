@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoint } from "./Breakpoints";
 import { CHAMPAGNE, FONT_COLOR } from "./Colors";
 
 export interface IInputs {
@@ -14,4 +15,8 @@ export const Input = styled.input`
   outline: none;
   padding: 10px 15px;
   color: ${FONT_COLOR};
+  @media ${breakpoint.mobileMenu} {
+    font-size: medium;
+    height: 20px;
+  }
 `;

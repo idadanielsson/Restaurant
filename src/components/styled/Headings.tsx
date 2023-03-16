@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoint } from "./Breakpoints";
 import { CHAMPAGNE, FONT_COLOR } from "./Colors";
 
 export interface IHeadingsProps {
@@ -48,12 +49,18 @@ export const AmountOfGuestsHeading = styled(H5)`
   width: 50%;
   padding: 20px;
   color: ${FONT_COLOR};
+  @media ${breakpoint.mobileMenu} {
+    width: 80%;
+  }
 `;
 
 export const BookingFormHeading = styled(H5)`
   font-size: 25px;
   padding: 10px;
   color: ${FONT_COLOR};
+  @media ${breakpoint.mobileMenu} {
+    font-size: 20px;
+  }
 `;
 
 export const ContactHeading = styled(H5)`

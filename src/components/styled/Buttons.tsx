@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoint } from "./Breakpoints";
 import {
   BG_COLOR,
   BTN_BORDER,
@@ -30,6 +31,10 @@ export const Button1 = styled.button`
   font-weight: 700;
   font-size: large;
   cursor: pointer;
+  @media ${breakpoint.mobileMenu} {
+    padding: 15px 40px;
+    font-size: 12px;
+  }
 `;
 
 export const TimesButton = styled(Button1)`
@@ -40,8 +45,10 @@ export const TimesButton = styled(Button1)`
     background-color: ${FONT_COLOR};
     color: ${BG_COLOR};
   }
-  &:active {
-    background-color: red;
+
+  @media ${breakpoint.mobileMenu} {
+    height: 45px;
+    width: 140px;
   }
 `;
 
@@ -66,4 +73,15 @@ export const HeroButton = styled(Button)`
   text-transform: uppercase;
 `;
 
-export const DeleteButton = styled(Button1)``;
+export const DeleteButton = styled(Button1)`
+  padding: 0px;
+  height: 5px;
+  margin-right: 5px;
+`;
+
+export const EditButton = styled(Button1)`
+  @media ${breakpoint.mobileMenu} {
+    padding: 0px;
+    height: 5px;
+  }
+`;

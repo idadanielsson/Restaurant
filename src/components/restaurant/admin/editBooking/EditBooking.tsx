@@ -5,7 +5,7 @@ import {
   changeBooking,
   getBookings,
 } from "../../../../services/RestaurantService";
-import { Button1 } from "../../../styled/Buttons";
+import { EditButton } from "../../../styled/Buttons";
 import { Input } from "../../../styled/Inputs";
 import { EditBookingParagraph } from "../../../styled/Paragraphs";
 import { Wrapper } from "../../../styled/Wrappers";
@@ -69,9 +69,9 @@ export const EditBooking = () => {
       ></Input>
       <EditBookingParagraph>Tid: {editableBooking.time}</EditBookingParagraph>
       <EditBookingParagraph>Datum: {editableBooking.date}</EditBookingParagraph>
-      <Button1 padding="20px 40px" onClick={changeBookingFunction}>
+      <EditButton padding="20px 40px" onClick={changeBookingFunction}>
         Ändra Bokning
-      </Button1>
+      </EditButton>
     </Wrapper>
   );
 };

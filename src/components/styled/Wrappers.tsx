@@ -41,6 +41,10 @@ export const BackgroundWrapper = styled.div`
   margin: 0;
   padding: 0;
   background-color: ${BG_COLOR};
+  margin-bottom: 20px;
+  @media ${breakpoint.mobileMenu} {
+    height: 100%;
+  }
 `;
 
 export const HomeHeadingWrapper = styled.div`
@@ -168,6 +172,11 @@ export const BookingWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media ${breakpoint.mobileMenu} {
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 `;
 
 export const CalendarWrapper = styled.div`
@@ -176,6 +185,9 @@ export const CalendarWrapper = styled.div`
   background-color: #1e1f20;
   padding: 10px;
   border-radius: 5px;
+  @media ${breakpoint.mobileMenu} {
+    width: 80%;
+  }
 
   .react-calendar__navigation {
     display: flex;
@@ -207,6 +219,9 @@ export const CalendarWrapper = styled.div`
     &:active {
       background-color: #ab947e;
     }
+    @media ${breakpoint.mobileMenu} {
+      padding: 10px 0;
+    }
   }
 
   .react-calendar__tile--active {
@@ -222,6 +237,9 @@ export const CalendarWrapper = styled.div`
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1em;
+    @media ${breakpoint.mobileMenu} {
+      font-size: 10px;
+    }
   }
   /* ~~~ day grid styles ~~~ */
   .react-calendar__month-view__days {
@@ -264,6 +282,9 @@ export const AmountOfGuestsWrapper = styled.div`
   margin-bottom: 40px;
   margin-bottom: 30px;
   gap: 10px;
+  @media ${breakpoint.mobileMenu} {
+    width: 80%;
+  }
 `;
 
 export const AmountOfGuestsCard = styled.div`
@@ -281,12 +302,18 @@ export const AmountOfGuestsCard = styled.div`
     color: ${BG_COLOR};
     cursor: pointer;
   }
+  @media ${breakpoint.mobileMenu} {
+    height: 40px;
+  }
 `;
 
 export const SearchTableTimesWrapper = styled.div`
   width: 50%;
   display: flex;
   gap: 3px;
+  @media ${breakpoint.mobileMenu} {
+    width: 80%;
+  }
 `;
 
 export const SearchTableButtonWrapper = styled.div`
@@ -294,6 +321,9 @@ export const SearchTableButtonWrapper = styled.div`
   width: 50%;
   display: flex;
   justify-content: start;
+  @media ${breakpoint.mobileMenu} {
+    width: 80%;
+  }
 `;
 
 export const InputWrapper = styled.div`
@@ -306,9 +336,15 @@ export const InputWrapper = styled.div`
 export const FormWrapper = styled.form`
   width: 60%;
   display: grid;
-  grid-template-columns: 40% 40%;
+
   gap: 30px;
   justify-content: center;
+  @media ${breakpoint.mobileMenu} {
+    width: 80%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const BookTableButtonWrapper = styled.div`
@@ -317,11 +353,19 @@ export const BookTableButtonWrapper = styled.div`
   display: flex;
   justify-content: end;
   gap: 40px;
+  @media ${breakpoint.mobileMenu} {
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 export const AdminBookingWrapper = styled.div`
   background-color: ${CHAMPAGNE};
   padding: 10px;
+  border-radius: 5px;
+  @media ${breakpoint.mobileMenu} {
+    height: 200px;
+  }
 `;
 
 export const AdminBookingsWrapper = styled.div`
@@ -331,6 +375,10 @@ export const AdminBookingsWrapper = styled.div`
   padding-top: 70px;
   gap: 20px;
   padding: 4rem 2rem;
+
+  @media ${breakpoint.mobileMenu} {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const AdminBookingButtonsWrapper = styled.div`
