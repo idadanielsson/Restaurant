@@ -27,7 +27,7 @@ export const Footer = () => {
               <NavLink color={DARK_FONT_COLOR} to="/">
                 Hem
               </NavLink>
-              <NavLink color={DARK_FONT_COLOR} to="/menu">
+              <NavLink color={DARK_FONT_COLOR} to="/menu/1">
                 Meny
               </NavLink>
               <NavLink color={DARK_FONT_COLOR} to="/booking">

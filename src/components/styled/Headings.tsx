@@ -80,24 +80,3 @@ export const ItemTitle = styled.h6`
   color: ${FONT_COLOR};
   margin: 0;
 `;
-
-export const H6 = styled.button`
-  color: ${CHAMPAGNE};
-  font-family: "Cormorant Infant", serif;
-  font-size: 34px;
-  font-weight: 300;
-  background-color: ${CHAMPAGNE};
-  color: ${FONT_COLOR};
-  padding: 5px 10px;
-  cursor: pointer;
-  border: none;
-`;
-
-export const ItemTitle = styled.h6`
-  font-size: 22px;
-  font-family: "Cormorant Infant", serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: ${FONT_COLOR};
-  margin: 0;
-`;

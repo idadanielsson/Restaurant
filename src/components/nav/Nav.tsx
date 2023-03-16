@@ -43,7 +43,7 @@ export const Nav = () => {
             <NavLink color={FONT_COLOR} to="/">
               Hem
             </NavLink>
-            <NavLink color={FONT_COLOR} to="/menu">
+            <NavLink color={FONT_COLOR} to="/menu/1">
               Meny
             </NavLink>
             <NavLink color={FONT_COLOR} to="/booking">

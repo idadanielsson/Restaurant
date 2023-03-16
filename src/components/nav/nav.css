@@ -5,7 +5,8 @@
 }
 @media screen and (max-width: 768px) {
   .nav {
-    display: none;
+    transform: translateX(-100%);
+    transition: ease-in 0.4s;
   }
 }
 
@@ -19,5 +20,8 @@
   .navActive {
     background-color: rgba(44, 45, 52, 0.743);
     width: 200px;
+    transform: translateX(0%);
+    transition: ease-out 0.4s;
+    position: absolute;
   }
 }

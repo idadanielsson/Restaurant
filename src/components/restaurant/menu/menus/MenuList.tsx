@@ -7,16 +7,33 @@ export const MenuList = () => {
   const { id } = useParams();
   let newId = Number(id);
 
-  const menuHtml = menus
-    .filter((m) => m.categoryId === newId)
-    .map((m) => (
-      <MenuItemWrapper>
-        <ItemTitle>
-          {m.name} | {m.price}
-        </ItemTitle>
+  const menuHtml = id
+    ? menus
+        .filter((m) => m.categoryId === newId)
+        .map((m) => {
+          return (
+            <MenuItemWrapper>
+              <ItemTitle>
+                {m.name} | {m.price}
+              </ItemTitle>
 
-        <ItemP>{m.description}</ItemP>
-      </MenuItemWrapper>
-    ));
+              <ItemP>{m.description}</ItemP>
+            </MenuItemWrapper>
+          );
+        })
+    : menus
+        .filter((m) => m.categoryId === 1)
+        .map((m) => {
+          return (
+            <MenuItemWrapper>
+              <ItemTitle>
+                {m.name} | {m.price}
+              </ItemTitle>
+
+              <ItemP>{m.description}</ItemP>
+            </MenuItemWrapper>
+          );
+        });
+
   return <>{menuHtml}</>;
 };
