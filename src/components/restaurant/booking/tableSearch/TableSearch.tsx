@@ -39,7 +39,11 @@ export const TableSearch = () => {
       if (availableTables > 0) {
         navigate(`/booking/form`);
       } else {
-        swal("Det finns inga lediga bord på din valda tid");
+        swal(
+          "Försök igen",
+          "Det finns inga lediga bord på din valda tid",
+          "error"
+        );
       }
     } else {
       swal("Försök igen", "Fyll i datum, tid och antal gäster", "error");
