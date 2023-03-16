@@ -348,20 +348,22 @@ export const HamburgerWrapper = styled.div`
 
 export const BigMenuWrapper = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 60px;
+  padding: 0;
+
+  @media ${breakpoint.mobileMenu} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const MenuCategoryWrapper = styled.div`
-  height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-top: 80px;
-`;
+  margin-bottom: 20px;
 
-export const MenuCategoryItemWrapper = styled.div`
-  width: 30%;
+  @media ${breakpoint.mobileMenu} {
+    flex-direction: row;
+  }
 `;
