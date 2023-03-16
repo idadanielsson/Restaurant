@@ -237,6 +237,12 @@ export const ContactTextWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 60px;
+
+  @media ${breakpoint.mobileMenu} {
+    width: 300px;
+    height: 350px;
+    gap: 40px;
+  }
 `;
 
 // BOOKING
