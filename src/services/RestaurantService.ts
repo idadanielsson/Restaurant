@@ -24,12 +24,6 @@ export const getBookings = async () => {
   return response.data;
 };
 
-export const getAdminBookings = async () => {
-  let response = await axios.get(`${API}/booking/restaurant/${restaurantID}`);
-
-  return response.data;
-};
-
 export const createBooking = async (booking: IBooking) => {
   let response = await axios.post(`${API}/booking/create`, booking);
   return response.data;

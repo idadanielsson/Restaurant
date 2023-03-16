@@ -1,14 +1,19 @@
 import { ChangeEvent, useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { IEditBooking } from "../../../../models/IEditBooking";
-import { changeBooking } from "../../../../services/RestaurantService";
+import {
+  changeBooking,
+  getBookings,
+} from "../../../../services/RestaurantService";
 import { Button1 } from "../../../styled/Buttons";
 import { Input } from "../../../styled/Inputs";
 import { EditBookingParagraph } from "../../../styled/Paragraphs";
 import { AdminContext } from "../Admin";
 
 export const EditBooking = () => {
-  const { bookings } = useContext(AdminContext);
+  const { bookings, handleEditedBooking } = useContext(AdminContext);
+
+  const navigate = useNavigate();
 
   const [editableBooking, setEditableBooking] = useState<IEditBooking>({
     id: "",
@@ -38,6 +43,8 @@ export const EditBooking = () => {
 
   const changeBookingFunction = () => {
     changeBooking(editableBooking);
+    navigate(`/admin/bookings`);
+    handleEditedBooking(editableBooking);
   };
 
   return (

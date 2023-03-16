@@ -20,7 +20,7 @@ export const TableSearch = () => {
   const { handleAmountOfGuests, handleTime, handleDate, booking } =
     useContext(BookingContext);
 
-  const amountOfGuestsList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const amountOfGuestsList = [1, 2, 3, 4, 5, 6];
 
   let navigate = useNavigate();
 

@@ -262,7 +262,7 @@ export const AmountOfGuestsWrapper = styled.div`
   display: flex;
   margin-bottom: 40px;
   margin-bottom: 30px;
-  justify-content: space-between;
+  gap: 10px;
 `;
 
 export const AmountOfGuestsCard = styled.div`
