@@ -22,6 +22,7 @@ export const CustomerForm = () => {
         onSubmit={(e: FormEvent) => {
           e.preventDefault();
           createBooking(booking);
+
           console.log("hej");
           localStorage.removeItem("booking");
           swal("Tack för din bokning!", "", "success");

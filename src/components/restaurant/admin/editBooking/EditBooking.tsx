@@ -8,6 +8,7 @@ import {
 import { Button1 } from "../../../styled/Buttons";
 import { Input } from "../../../styled/Inputs";
 import { EditBookingParagraph } from "../../../styled/Paragraphs";
+import { Wrapper } from "../../../styled/Wrappers";
 import { AdminContext } from "../Admin";
 
 export const EditBooking = () => {
@@ -48,16 +49,29 @@ export const EditBooking = () => {
   };
 
   return (
-    <>
-      <EditBookingParagraph>{editableBooking.id}</EditBookingParagraph>
-      <EditBookingParagraph>{editableBooking.customerId}</EditBookingParagraph>
+    <Wrapper
+      height="100vh"
+      display="flex"
+      justify="center"
+      align="center"
+      direction="column"
+    >
+      <EditBookingParagraph>
+        Bokningsid: {editableBooking.id}
+      </EditBookingParagraph>
+      <EditBookingParagraph>
+        Kundid: {editableBooking.customerId}
+      </EditBookingParagraph>
+      <EditBookingParagraph>Antal gäster:</EditBookingParagraph>
       <Input
         placeholder={editableBooking.numberOfGuests.toString()}
         onChange={handleChange}
       ></Input>
-      <EditBookingParagraph>{editableBooking.time}</EditBookingParagraph>
-      <EditBookingParagraph>{editableBooking.date}</EditBookingParagraph>
-      <Button1 onClick={changeBookingFunction}>Ändra Bokning</Button1>
-    </>
+      <EditBookingParagraph>Tid: {editableBooking.time}</EditBookingParagraph>
+      <EditBookingParagraph>Datum: {editableBooking.date}</EditBookingParagraph>
+      <Button1 padding="20px 40px" onClick={changeBookingFunction}>
+        Ändra Bokning
+      </Button1>
+    </Wrapper>
   );
 };

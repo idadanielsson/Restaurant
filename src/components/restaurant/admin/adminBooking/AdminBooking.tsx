@@ -1,6 +1,6 @@
 import { IBookingResponse } from "../../../../models/IBookingResponse";
 import { deleteBooking } from "../../../../services/RestaurantService";
-import { Button, DeleteButton } from "../../../styled/Buttons";
+import { Button, Button1, DeleteButton } from "../../../styled/Buttons";
 import { AdminBookingParagraph } from "../../../styled/Paragraphs";
 import {
   AdminBookingButtonsWrapper,
@@ -8,7 +8,7 @@ import {
 } from "../../../styled/Wrappers";
 
 import { RxCross1 } from "react-icons/rx";
-import { HiOutlinePencil } from "react-icons/hi";
+import { FiEdit } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 interface IAdminBookingProps {
@@ -52,13 +52,13 @@ export const AdminBooking = (props: IAdminBookingProps) => {
         >
           <RxCross1 fontSize="25px" color="red" />
         </DeleteButton>
-        <Button
+        <Button1
           onClick={() => {
             handleEdit(props.booking._id);
           }}
         >
-          <HiOutlinePencil color="yellow" fontSize="25px" />
-        </Button>
+          <FiEdit color="yellow" fontSize="25px" />
+        </Button1>
       </AdminBookingButtonsWrapper>
     </AdminBookingWrapper>
   );

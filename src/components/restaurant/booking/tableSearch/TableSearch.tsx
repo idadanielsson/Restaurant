@@ -16,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 import { getBookings } from "../../../../services/RestaurantService";
 import { IBooking } from "../../../../models/IBooking";
 import swal from "sweetalert";
+import "./TableSearch.css";
 export const TableSearch = () => {
   const { handleAmountOfGuests, handleTime, handleDate, booking } =
     useContext(BookingContext);

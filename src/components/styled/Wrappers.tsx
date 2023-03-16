@@ -330,7 +330,7 @@ export const AdminBookingsWrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding-top: 70px;
   gap: 20px;
-  margin: 2rem;
+  padding: 4rem 2rem;
 `;
 
 export const AdminBookingButtonsWrapper = styled.div`
