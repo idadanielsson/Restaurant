@@ -9,6 +9,8 @@ import { TableTimes } from "./components/restaurant/booking/tableTimes/TableTime
 import { Home } from "./components/restaurant/home/Home";
 import { Menu } from "./components/restaurant/menu/Menu";
 
+import { MenuList } from "./components/restaurant/menu/menus/MenuList";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -42,7 +44,14 @@ export const router = createBrowserRouter([
       {
         path: "/menu",
         element: <Menu />,
+        children: [
+          {
+            path: "/menu:id",
+            element: <MenuList />,
+          },
+        ],
       },
+
       {
         path: "/admin",
         element: <Admin />,

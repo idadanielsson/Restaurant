@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FONT_COLOR } from "./Colors";
+import { CHAMPAGNE, FONT_COLOR } from "./Colors";
 
 export interface IHeadingsProps {
   height?: string;
@@ -58,4 +58,46 @@ export const BookingFormHeading = styled(H5)`
 
 export const ContactHeading = styled(H5)`
   text-align: center;
+`;
+
+export const H6 = styled.button`
+  color: ${CHAMPAGNE};
+  font-family: "Cormorant Infant", serif;
+  font-size: 34px;
+  font-weight: 300;
+  background-color: ${CHAMPAGNE};
+  color: ${FONT_COLOR};
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+`;
+
+export const ItemTitle = styled.h6`
+  font-size: 22px;
+  font-family: "Cormorant Infant", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: ${FONT_COLOR};
+  margin: 0;
+`;
+
+export const H6 = styled.button`
+  color: ${CHAMPAGNE};
+  font-family: "Cormorant Infant", serif;
+  font-size: 34px;
+  font-weight: 300;
+  background-color: ${CHAMPAGNE};
+  color: ${FONT_COLOR};
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+`;
+
+export const ItemTitle = styled.h6`
+  font-size: 22px;
+  font-family: "Cormorant Infant", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: ${FONT_COLOR};
+  margin: 0;
 `;
