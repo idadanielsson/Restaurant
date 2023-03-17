@@ -5,10 +5,11 @@ import { FONT_COLOR } from "./Colors";
 export const AdminBookingParagraph = styled.p`
   color: ${FONT_COLOR};
   font-family: "Cormorant Infant", serif;
-  font-size: 25px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 300;
+
   @media ${breakpoint.mobileMenu} {
-    font-size: 12px;
+    font-size: 16px;
   }
 `;
 

@@ -364,12 +364,10 @@ export const AdminBookingWrapper = styled.div`
   padding: 10px;
   border-radius: 5px;
   @media ${breakpoint.mobileMenu} {
-    height: 200px;
   }
 `;
 
 export const AdminBookingsWrapper = styled.div`
-  height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding-top: 70px;
@@ -380,6 +378,7 @@ export const AdminBookingsWrapper = styled.div`
 
   @media ${breakpoint.mobileMenu} {
     grid-template-columns: 1fr 1fr;
+    padding: 6rem 2rem;
   }
 `;
 
