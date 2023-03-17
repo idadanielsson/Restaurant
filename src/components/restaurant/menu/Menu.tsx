@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom";
 import { MenuHeading } from "../../styled/Headings";
-import { MenuListWrapper } from "../../styled/MenuItem";
+
 import {
   BigMenuWrapper,
   MenuCategoryWrapper,
+  MenuListWrapper,
   Wrapper,
 } from "../../styled/Wrappers";
 import { MenuCategories } from "./menuCategories/MenuCategories";

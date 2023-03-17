@@ -499,3 +499,29 @@ export const MenuCategoryWrapper = styled.div`
     flex-direction: row;
   }
 `;
+
+export const MenuListWrapper = styled.ul`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  @media ${breakpoint.mobileMenu} {
+    width: 80%;
+    align-items: center;
+  }
+`;
+
+export const MenuItemWrapper = styled.li`
+  padding-bottom: 20px;
+  margin-left: 21%;
+
+  @media ${breakpoint.mobileMenu} {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+`;
