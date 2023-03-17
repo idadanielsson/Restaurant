@@ -35,14 +35,16 @@ export const getBookingsFromLs = () => {
   if (bookingsFromLs) {
     return JSON.parse(localStorage.getItem("bookings") || "");
   } else {
-    return {
-      _id: "",
-      restaurantId: "",
-      date: "",
-      time: "",
-      numberOfGuests: 0,
-      customerId: "",
-    };
+    return [
+      {
+        _id: "",
+        restaurantId: "",
+        date: "",
+        time: "",
+        numberOfGuests: 0,
+        customerId: "",
+      },
+    ];
   }
 };
 
