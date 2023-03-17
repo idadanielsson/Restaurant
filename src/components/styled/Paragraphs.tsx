@@ -21,3 +21,8 @@ export const ItemP = styled.p`
   line-height: 25px;
   color: ${FONT_COLOR};
 `;
+
+export const ParagrapfGDPR = styled.p`
+  color: ${FONT_COLOR};
+  font-size: 10px;
+`;

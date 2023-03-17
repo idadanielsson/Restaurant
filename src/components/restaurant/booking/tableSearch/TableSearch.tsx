@@ -17,6 +17,7 @@ import { getBookings } from "../../../../services/RestaurantService";
 import { IBooking } from "../../../../models/IBooking";
 import swal from "sweetalert";
 import "./TableSearch.css";
+import { ParagrapfGDPR } from "../../../styled/Paragraphs";
 export const TableSearch = () => {
   const { handleAmountOfGuests, handleTime, handleDate, booking } =
     useContext(BookingContext);
@@ -103,6 +104,7 @@ export const TableSearch = () => {
         <Button onClick={searchTable} height="50px" width="200px">
           Sök bord
         </Button>
+        <ParagrapfGDPR>*Vi hanterar personuppgifter enligt GDPR </ParagrapfGDPR>
       </SearchTableButtonWrapper>
     </BookingWrapper>
   );

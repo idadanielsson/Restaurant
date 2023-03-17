@@ -393,7 +393,9 @@ export const SearchTableButtonWrapper = styled.div`
   margin-top: 40px;
   width: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: start;
+  gap: 5px;
   @media ${breakpoint.mobileMenu} {
     width: 80%;
   }
