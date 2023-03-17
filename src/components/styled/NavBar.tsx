@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { breakpoint } from "./Breakpoints";
-import { BG_COLOR, CHAMPAGNE } from "./Colors";
+import { CHAMPAGNE } from "./Colors";
 
 export interface INavProps {
   fontSize?: string;

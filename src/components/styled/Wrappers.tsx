@@ -12,10 +12,6 @@ import {
 export interface IRestaurantWrapperProps {
   height?: string;
   width?: string;
-  display?: string;
-  direction?: string;
-  justify?: string;
-  align?: string;
   bgcolor?: string;
   bgimage?: string;
   color?: string;
