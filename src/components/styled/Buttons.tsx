@@ -85,7 +85,6 @@ export const HeroButton = styled(Button)`
 
   @media ${breakpoint.mobileMenu} {
     font-size: 20px;
-    padding: 20px;
   }
 `;
 
