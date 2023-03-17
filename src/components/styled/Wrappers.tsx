@@ -26,11 +26,6 @@ export interface IRestaurantWrapperProps {
 export const Wrapper = styled.div`
   height: ${(props: IRestaurantWrapperProps) => props.height};
   width: ${(props: IRestaurantWrapperProps) => props.width};
-  display: ${(props: IRestaurantWrapperProps) => props.display};
-  flex-direction: ${(props: IRestaurantWrapperProps) => props.direction};
-  justify-content: ${(props: IRestaurantWrapperProps) => props.justify};
-  align-items: ${(props: IRestaurantWrapperProps) => props.align};
-  background-color: ${(props: IRestaurantWrapperProps) => props.bgcolor};
 
   @media ${breakpoint.mobileMenu} {
     height: 80vh;

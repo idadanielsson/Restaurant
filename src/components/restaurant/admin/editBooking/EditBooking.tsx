@@ -8,7 +8,7 @@ import {
 import { EditButton } from "../../../styled/Buttons";
 import { Input } from "../../../styled/Inputs";
 import { EditBookingParagraph } from "../../../styled/Paragraphs";
-import { EditCardWrapper, Wrapper } from "../../../styled/Wrappers";
+import { EditCardWrapper } from "../../../styled/Wrappers";
 import { AdminContext } from "../Admin";
 
 export const EditBooking = () => {
