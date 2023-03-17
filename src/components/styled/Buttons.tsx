@@ -82,12 +82,10 @@ export const HeroButton = styled(Button)`
 `;
 
 export const DeleteButton = styled(Button1)`
-  padding: 0px;
-  height: 5px;
-  margin-right: 5px;
+  padding: 15px;
 `;
 
-export const EditButton = styled(Button1)`
+export const EditButton = styled(DeleteButton)`
   @media ${breakpoint.mobileMenu} {
     padding: 15px;
   }
