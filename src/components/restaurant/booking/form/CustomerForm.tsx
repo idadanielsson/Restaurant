@@ -11,7 +11,8 @@ import {
 } from "../../../styled/Wrappers";
 import swal from "sweetalert";
 import { BookingContext } from "../Booking";
-import { ButtonFade } from "../../../styled/Buttons";
+import { Button } from "../../../styled/Buttons";
+import { ParagrapfGDPR } from "../../../styled/Paragraphs";
 
 export const CustomerForm = () => {
   const { handleChange, booking } = useContext(BookingContext);
@@ -67,12 +68,12 @@ export const CustomerForm = () => {
           ></Input>
         </InputWrapper>
         <BookTableButtonWrapper>
-          <ButtonFade padding="10px 50px">Bekräfta Bokning</ButtonFade>
-
+          <Button padding="10px 50px">Bekräfta Bokning</Button>
           <Link to="/">
-            <ButtonFade padding="10px 50px">Avbryt bokning</ButtonFade>
+            <Button padding="10px 50px">Avbryt bokning</Button>
           </Link>
         </BookTableButtonWrapper>
+        <ParagrapfGDPR>*Vi hanterar personuppgifter enligt GDPR</ParagrapfGDPR>
       </FormWrapper>
     </BookingWrapper>
   );

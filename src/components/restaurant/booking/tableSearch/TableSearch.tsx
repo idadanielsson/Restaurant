@@ -104,7 +104,6 @@ export const TableSearch = () => {
         <Button onClick={searchTable} height="50px" width="200px">
           Sök bord
         </Button>
-        <ParagrapfGDPR>*Vi hanterar personuppgifter enligt GDPR </ParagrapfGDPR>
       </SearchTableButtonWrapper>
     </BookingWrapper>
   );
