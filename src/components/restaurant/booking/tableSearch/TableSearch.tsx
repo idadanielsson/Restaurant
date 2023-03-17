@@ -85,8 +85,8 @@ export const TableSearch = () => {
           onClick={() => {
             handleTime("18.00");
           }}
-          height="60px"
-          width="200px"
+          height="50px"
+          width="150px"
         >
           18.00
         </TimesButton>
@@ -95,8 +95,8 @@ export const TableSearch = () => {
           onClick={() => {
             handleTime("21.00");
           }}
-          height="60px"
-          width="200px"
+          height="50px"
+          width="150px"
         >
           21.00
         </TimesButton>

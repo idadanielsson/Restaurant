@@ -47,6 +47,9 @@ export const TimesButton = styled(Button1)`
     background-color: ${FONT_COLOR};
     color: ${BG_COLOR};
   }
+  &:active {
+    background-color: red;
+  }
 
   @media ${breakpoint.mobileMenu} {
     height: 45px;
@@ -79,6 +82,10 @@ export const Button = styled.button`
 
 export const HeroButton = styled(Button)`
   text-transform: uppercase;
+
+  @media ${breakpoint.mobileMenu} {
+    font-size: 20px;
+  }
 `;
 
 export const DeleteButton = styled(Button1)`

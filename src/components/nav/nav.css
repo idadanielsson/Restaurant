@@ -18,7 +18,7 @@
 
 @media screen and (max-width: 768px) {
   .navActive {
-    background-color: rgba(44, 45, 52, 0.743);
+    background-color: #1e1f20e4;
     width: 200px;
     transform: translateX(0%);
     transition: ease-out 0.4s;

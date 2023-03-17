@@ -3,6 +3,7 @@ import { Button } from "../../styled/Buttons";
 import { BG_COLOR } from "../../styled/Colors";
 import { H3, H5 } from "../../styled/Headings";
 import {
+  LocationImageWrapper,
   LocationTextContainer,
   LocationTextWrapper,
   LocationWrapper,
@@ -18,13 +19,8 @@ export const Location = () => {
     navigate(`/booking`);
   };
   return (
-    <Wrapper
-      height="100vh"
-      bgcolor={BG_COLOR}
-      display="flex"
-      direction="row-reverse"
-    >
-      <LocationWrapper bgimage={foodPlate}></LocationWrapper>
+    <LocationWrapper>
+      <LocationImageWrapper bgimage={foodPlate}></LocationImageWrapper>
       <LocationTextWrapper>
         <H3 width="49%">Upplev en utmärkt middag på 76 Gastronome</H3>
         <LocationTextContainer>
@@ -41,6 +37,6 @@ export const Location = () => {
           Boka bord
         </Button>
       </LocationTextWrapper>
-    </Wrapper>
+    </LocationWrapper>
   );
 };

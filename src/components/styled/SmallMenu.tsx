@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { FONT_COLOR } from "./Colors";
+import { breakpoint } from "./Breakpoints";
+import { BTN_BORDER, CHAMPAGNE, FONT_COLOR } from "./Colors";
 import { IRestaurantWrapperProps } from "./Wrappers";
 
 export const SmallMenu = styled.div`
@@ -11,6 +12,10 @@ export const SmallMenu = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media ${breakpoint.mobileMenu} {
+    height: 500px;
+  }
 `;
 
 export const SmallMenuText = styled.p`

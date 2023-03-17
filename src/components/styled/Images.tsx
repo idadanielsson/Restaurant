@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import aboutIMage from "./../../assets/restaurant-pasta.png";
+import { breakpoint } from "./Breakpoints";
 
 export interface IImageProps {
   bgImage?: string;
@@ -18,6 +19,10 @@ export const AboutImageWrapper = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   bottom: 0;
+
+  @media ${breakpoint.mobileMenu} {
+    height: 25vh;
+  }
 `;
 
 export const BackgroundImage = styled.div`
@@ -38,6 +43,15 @@ export const HeroWrapper = styled(BackgroundImage)`
   position: absolute;
   top: 0;
   z-index: 0;
+
+  @media ${breakpoint.mobileMenu} {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    background-position: left;
+  }
 `;
 
 export const MenuSmallImage = styled.img`

@@ -5,6 +5,8 @@ import menuPlates from "./../../../assets/restaurant-plate-3.png";
 import menuBrew from "./../../../assets/restaurant-brew.png";
 import menuDrinks from "./../../../assets/restaurant-plate-2.png";
 import {
+  MenuSmallWrapper,
+  SmallMenuTextWrapper,
   SmallMenuTitleWrapper,
   SmallMenuWrapper,
   Wrapper,
@@ -18,14 +20,17 @@ import { Button } from "../../styled/Buttons";
 export const MenuSmall = () => {
   const [menuSmall, setMenuSmall] = useState<IMenuList[]>([
     {
+      id: "1",
       image: menuPlates,
       name: "Gourmet plates",
     },
     {
+      id: "2",
       image: menuBrew,
       name: "Craft brews",
     },
     {
+      id: "3",
       image: menuDrinks,
       name: "Wine & coctails",
     },
@@ -39,7 +44,7 @@ export const MenuSmall = () => {
 
   let menuSmallHtml = menuSmall.map((menuSmall) => {
     return (
-      <SmallMenu bgimage={menuSmall.image}>
+      <SmallMenu key={menuSmall.id} bgimage={menuSmall.image}>
         <Button
           padding="20px"
           fontSize="24px"
@@ -53,13 +58,13 @@ export const MenuSmall = () => {
   });
 
   return (
-    <Wrapper>
-      <SmallMenuWrapper height="30vh" bgcolor={BG_COLOR}>
+    <MenuSmallWrapper>
+      <SmallMenuTextWrapper>
         <SmallMenuTitleWrapper>
           <H2 fontSize="60px">På menyn</H2>
         </SmallMenuTitleWrapper>
-      </SmallMenuWrapper>
+      </SmallMenuTextWrapper>
       <SmallMenuWrapper height="70vh">{menuSmallHtml}</SmallMenuWrapper>
-    </Wrapper>
+    </MenuSmallWrapper>
   );
 };

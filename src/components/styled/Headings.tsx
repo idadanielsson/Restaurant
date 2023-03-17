@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { breakpoint } from "./Breakpoints";
 import { CHAMPAGNE, FONT_COLOR } from "./Colors";
+import { HeroTitleSlider } from "./Keyframes";
 
 export interface IHeadingsProps {
   height?: string;
@@ -16,6 +17,12 @@ export const H1 = styled.h1`
   margin: 0px;
   color: ${FONT_COLOR};
   font-weight: 300;
+  animation-name: ${HeroTitleSlider};
+  animation-duration: 1.5s;
+
+  @media ${breakpoint.mobileMenu} {
+    font-size: 50px;
+  }
 `;
 
 export const H2 = styled.h2`
@@ -25,6 +32,10 @@ export const H2 = styled.h2`
   margin: 0px;
   font-weight: 300;
   color: ${FONT_COLOR};
+
+  @media ${breakpoint.mobileMenu} {
+    font-size: 40px;
+  }
 `;
 
 export const H3 = styled.h3`
@@ -34,6 +45,10 @@ export const H3 = styled.h3`
   color: ${FONT_COLOR};
   font-weight: 300;
   width: ${(props: IHeadingsProps) => props.width};
+
+  @media ${breakpoint.mobileMenu} {
+    font-size: 28px;
+  }
 `;
 
 export const H5 = styled.h5`
@@ -43,6 +58,12 @@ export const H5 = styled.h5`
   color: ${(props: IHeadingsProps) => props.color};
   font-weight: 300;
   width: ${(props: IHeadingsProps) => props.width};
+
+  @media ${breakpoint.mobileMenu} {
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+  }
 `;
 
 export const AmountOfGuestsHeading = styled(H5)`
