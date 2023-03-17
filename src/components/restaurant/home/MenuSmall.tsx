@@ -20,14 +20,17 @@ import { Button } from "../../styled/Buttons";
 export const MenuSmall = () => {
   const [menuSmall, setMenuSmall] = useState<IMenuList[]>([
     {
+      id: "1",
       image: menuPlates,
       name: "Gourmet plates",
     },
     {
+      id: "2",
       image: menuBrew,
       name: "Craft brews",
     },
     {
+      id: "3",
       image: menuDrinks,
       name: "Wine & coctails",
     },
@@ -41,7 +44,7 @@ export const MenuSmall = () => {
 
   let menuSmallHtml = menuSmall.map((menuSmall) => {
     return (
-      <SmallMenu bgimage={menuSmall.image}>
+      <SmallMenu key={menuSmall.id} bgimage={menuSmall.image}>
         <Button
           padding="20px"
           fontSize="24px"

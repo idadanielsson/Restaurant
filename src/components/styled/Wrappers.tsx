@@ -61,8 +61,6 @@ export const HomeHeadingWrapper = styled.div`
   }
 `;
 
-export const AboutHomeWrapper = styled.div``;
-
 export const HomeButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -88,7 +86,7 @@ export const AboutTextWrapper = styled.div`
   @media ${breakpoint.mobileMenu} {
     flex-direction: column;
     justify-content: center;
-    height: 30vh;
+    height: 40vh;
     gap: 40px;
     margin-top: 10px;
   }
@@ -253,11 +251,12 @@ export const BookingWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 1rem;
+  background-color: ${BG_COLOR};
 `;
 
 export const CalendarWrapper = styled.div`
   width: 50%;
-
   background-color: #1e1f20;
   padding: 10px;
   border-radius: 5px;
@@ -283,7 +282,7 @@ export const CalendarWrapper = styled.div`
     border-radius: 2px;
     color: #f2f4ea;
     font-weight: bold;
-    padding: 20px 0;
+    padding: 15px 0;
     &:hover {
       background-color: #f2f4ea;
       color: #1e1f20;
@@ -346,16 +345,15 @@ export const CalendarWrapper = styled.div`
 export const AmountOfGuestsWrapper = styled.div`
   width: 50%;
   display: flex;
-  margin-bottom: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   gap: 10px;
 `;
 
 export const AmountOfGuestsCard = styled.div`
   background-color: ${(props: IRestaurantWrapperProps) => props.bgcolor};
   color: ${(props: IRestaurantWrapperProps) => props.color};
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   display: flex;
   align-items: center;
   justify-content: center;

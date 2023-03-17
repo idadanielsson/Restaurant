@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { breakpoint } from "./Breakpoints";
-import { BG_COLOR } from "./Colors";
+import { BG_COLOR, CHAMPAGNE } from "./Colors";
 
 export interface INavProps {
   fontSize?: string;
@@ -31,9 +31,12 @@ export const NavBar = styled.nav`
 export const NavList = styled.ul`
   display: flex;
   justify-content: ${(props: INavProps) => props.justify};
-
   margin: 0px;
   margin-right: ${(props: INavProps) => props.marginRight};
+
+  @media ${breakpoint.mobileMenu} {
+    justify-content: start;
+  }
 `;
 
 export const NavItem = styled.li`
@@ -45,12 +48,26 @@ export const NavItem = styled.li`
 
   @media ${breakpoint.mobileMenu} {
     flex-direction: ${(props: INavProps) => props.direction};
+    gap: 20px;
+    padding: 40px 0px;
   }
 `;
 
 export const NavLink = styled(Link)`
   color: ${(props: INavProps) => props.color};
   text-decoration: none;
-  padding: 15px;
+  padding: 10px;
   font-family: "Cormorant Infant", serif;
+  text-align: center;
+  transition: all ease 0.3s;
+  :hover {
+    font-size: 28px;
+  }
+
+  @media ${breakpoint.mobileMenu} {
+    :hover {
+      background-color: ${CHAMPAGNE};
+      border-radius: 40px;
+    }
+  }
 `;

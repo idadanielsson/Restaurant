@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { breakpoint } from "./Breakpoints";
 import { CHAMPAGNE, FONT_COLOR } from "./Colors";
+import { HeroTitleSlider } from "./Keyframes";
 
 export interface IHeadingsProps {
   height?: string;
@@ -16,6 +17,8 @@ export const H1 = styled.h1`
   margin: 0px;
   color: ${FONT_COLOR};
   font-weight: 300;
+  animation-name: ${HeroTitleSlider};
+  animation-duration: 1.5s;
 
   @media ${breakpoint.mobileMenu} {
     font-size: 50px;
