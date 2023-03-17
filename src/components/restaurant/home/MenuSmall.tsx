@@ -37,7 +37,7 @@ export const MenuSmall = () => {
   const navigate = useNavigate();
 
   const toMenus = () => {
-    navigate(`/menu`);
+    navigate(`/menu/1`);
   };
 
   let menuSmallHtml = menuSmall.map((menuSmall) => {
