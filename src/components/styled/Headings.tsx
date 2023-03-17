@@ -114,4 +114,5 @@ export const MenuHeading = styled.h2`
   @media ${breakpoint.mobileMenu} {
     padding: 20px 0 0 0;
     font-size: 36px;
+  }
 `;

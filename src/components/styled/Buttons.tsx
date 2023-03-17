@@ -71,7 +71,7 @@ export const Button = styled.button`
   cursor: pointer;
 
   :hover {
-    background-color: ${CHAMPAGNE_FADE};
+    background-color: ${CHAMPAGNE};
   }
 
   @media ${breakpoint.mobileMenu} {
