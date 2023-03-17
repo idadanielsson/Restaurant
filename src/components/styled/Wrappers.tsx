@@ -497,6 +497,7 @@ export const MenuCategoryWrapper = styled.div`
 
   @media ${breakpoint.mobileMenu} {
     flex-direction: row;
+    margin: 0;
   }
 `;
 
@@ -506,7 +507,6 @@ export const MenuListWrapper = styled.ul`
   flex-direction: column;
   justify-content: center;
   list-style-type: none;
-  padding: 0;
   margin: 0;
 
   @media ${breakpoint.mobileMenu} {
@@ -524,4 +524,10 @@ export const MenuItemWrapper = styled.li`
     padding: 0 20px;
     width: 100%;
   }
+`;
+export const MenuWrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `;

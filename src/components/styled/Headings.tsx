@@ -112,6 +112,6 @@ export const MenuHeading = styled.h2`
   text-decoration: underline 1px;
 
   @media ${breakpoint.mobileMenu} {
-    padding: 20px 0;
+    padding: 20px 0 0 0;
   }
 `;

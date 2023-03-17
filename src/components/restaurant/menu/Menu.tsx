@@ -5,13 +5,14 @@ import {
   BigMenuWrapper,
   MenuCategoryWrapper,
   MenuListWrapper,
+  MenuWrapper,
   Wrapper,
 } from "../../styled/Wrappers";
 import { MenuCategories } from "./menuCategories/MenuCategories";
 
 export const Menu = () => {
   return (
-    <Wrapper height="100vh" display="flex" align="center" direction="column">
+    <MenuWrapper>
       <MenuHeading>Vår meny</MenuHeading>
       <BigMenuWrapper>
         <MenuCategoryWrapper>
@@ -22,6 +23,6 @@ export const Menu = () => {
           <Outlet></Outlet>
         </MenuListWrapper>
       </BigMenuWrapper>
-    </Wrapper>
+    </MenuWrapper>
   );
 };
