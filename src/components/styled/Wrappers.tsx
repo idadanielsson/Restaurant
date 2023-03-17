@@ -45,7 +45,6 @@ export const BackgroundWrapper = styled.div`
   margin: 0;
   padding: 0;
   background-color: ${BG_COLOR};
-  margin-bottom: 20px;
   @media ${breakpoint.mobileMenu} {
     height: 100%;
   }
