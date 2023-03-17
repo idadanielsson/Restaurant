@@ -14,3 +14,10 @@ export const AdminBookingParagraph = styled.p`
 `;
 
 export const EditBookingParagraph = styled(AdminBookingParagraph)``;
+
+export const ItemP = styled.p`
+  font-size: 16px;
+  font-family: "Cormorant Infant", serif;
+  line-height: 25px;
+  color: ${FONT_COLOR};
+`;

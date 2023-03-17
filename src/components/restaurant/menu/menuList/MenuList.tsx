@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import { menus } from "../../../../models/IMenu";
 import { ItemTitle } from "../../../styled/Headings";
-import { ItemP, MenuItemWrapper } from "../../../styled/MenuItem";
+import { ItemP } from "../../../styled/Paragraphs";
+import { MenuItemWrapper } from "../../../styled/Wrappers";
 
 export const MenuList = () => {
   const { id } = useParams();

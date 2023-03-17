@@ -496,5 +496,37 @@ export const MenuCategoryWrapper = styled.div`
 
   @media ${breakpoint.mobileMenu} {
     flex-direction: row;
+    margin: 0;
   }
+`;
+
+export const MenuListWrapper = styled.ul`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+
+  @media ${breakpoint.mobileMenu} {
+    width: 80%;
+    align-items: center;
+  }
+`;
+
+export const MenuItemWrapper = styled.li`
+  padding-bottom: 20px;
+  margin-left: 21%;
+
+  @media ${breakpoint.mobileMenu} {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+`;
+export const MenuWrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `;

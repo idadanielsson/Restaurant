@@ -24,7 +24,10 @@ export const AdminBookings = () => {
     if (bookings) {
       let copy = bookings.filter((b) => b.date === formattedDate);
       setFilteredBookings(copy);
+      console.log(copy);
     }
+    let copy = bookings.filter((b) => b.date === formattedDate);
+    setFilteredBookings(copy);
   }, [bookings]);
 
   let adminBookingsHtml = filteredBookings.map((b) => {
