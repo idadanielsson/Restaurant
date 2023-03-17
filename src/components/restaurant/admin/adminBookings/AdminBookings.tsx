@@ -24,7 +24,6 @@ export const AdminBookings = () => {
     if (bookings) {
       let copy = bookings.filter((b) => b.date === formattedDate);
       setFilteredBookings(copy);
-      console.log(copy);
     }
   }, [bookings]);
 

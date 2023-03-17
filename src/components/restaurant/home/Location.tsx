@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../styled/Buttons";
-import { BG_COLOR, BTN_BORDER, CHAMPAGNE_FADE } from "../../styled/Colors";
+import { BG_COLOR } from "../../styled/Colors";
 import { H3, H5 } from "../../styled/Headings";
 import {
   LocationTextContainer,

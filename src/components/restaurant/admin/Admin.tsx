@@ -60,13 +60,11 @@ export const Admin = () => {
 
   const getAdminBookings = async () => {
     let bookings = await getBookings();
-    console.log(bookings);
 
     let copy = [...bookings];
     copy = bookings;
     setBookings(copy);
   };
-  console.log(bookings);
 
   const handleDate = (date: Date) => {
     const year = date.getFullYear();
@@ -75,7 +73,6 @@ export const Admin = () => {
     const formattedDate = `${year}-${month}-${day}`;
     setFormattedDate(formattedDate);
   };
-  console.log(formattedDate);
 
   useEffect(() => {
     saveFormattedDateToLs(formattedDate);

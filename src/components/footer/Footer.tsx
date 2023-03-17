@@ -8,7 +8,7 @@ import {
   FooterWrapper,
   Wrapper,
 } from "../styled/Wrappers";
-import { BG_COLOR, CHAMPAGNE, DARK_FONT_COLOR } from "../styled/Colors";
+import { CHAMPAGNE, DARK_FONT_COLOR } from "../styled/Colors";
 import { H5 } from "../styled/Headings";
 
 export const Footer = () => {

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { menus } from "../../../../models/IMenu";
 import { categories } from "../../../../models/IMenuCategory";
-import { Button, Button1 } from "../../../styled/Buttons";
+import { Button } from "../../../styled/Buttons";
 import { BLUE, CHAMPAGNE } from "../../../styled/Colors";
 
 export const MenuCategories = () => {
@@ -11,7 +11,6 @@ export const MenuCategories = () => {
 
   const showMenu = (m: number) => {
     navigate(`/menu/${m}`);
-    console.log(menus);
   };
 
   const handleBackgroundColor = (c: string) => {
@@ -20,7 +19,7 @@ export const MenuCategories = () => {
 
   const categoryHtml = categories.categories.map((c) => {
     return (
-      <>
+      <div key={c.id}>
         <Button
           margin="12px"
           padding="10px 40px"
@@ -33,7 +32,7 @@ export const MenuCategories = () => {
         >
           {c.name}
         </Button>
-      </>
+      </div>
     );
   });
 

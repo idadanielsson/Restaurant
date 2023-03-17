@@ -12,7 +12,7 @@ export const MenuList = () => {
         .filter((m) => m.categoryId === newId)
         .map((m) => {
           return (
-            <MenuItemWrapper>
+            <MenuItemWrapper key={m.name}>
               <ItemTitle>
                 {m.name} | {m.price}
               </ItemTitle>
@@ -25,7 +25,7 @@ export const MenuList = () => {
         .filter((m) => m.categoryId === 1)
         .map((m) => {
           return (
-            <MenuItemWrapper>
+            <MenuItemWrapper key={m.id}>
               <ItemTitle>
                 {m.name} | {m.price}
               </ItemTitle>
