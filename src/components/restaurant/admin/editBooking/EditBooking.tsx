@@ -40,7 +40,6 @@ export const EditBooking = () => {
     copy.numberOfGuests = +e.target.value;
     setEditableBooking(copy);
   };
-  console.log(editableBooking);
 
   const changeBookingFunction = () => {
     changeBooking(editableBooking);

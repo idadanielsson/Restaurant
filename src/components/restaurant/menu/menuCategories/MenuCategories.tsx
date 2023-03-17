@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { menus } from "../../../../models/IMenu";
 import { categories } from "../../../../models/IMenuCategory";
 import { Button, ButtonWrapper } from "../../../styled/Buttons";
 import { BLUE, CHAMPAGNE } from "../../../styled/Colors";

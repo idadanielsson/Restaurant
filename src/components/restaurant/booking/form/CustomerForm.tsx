@@ -23,7 +23,6 @@ export const CustomerForm = () => {
           e.preventDefault();
           createBooking(booking);
 
-          console.log("hej");
           localStorage.removeItem("booking");
           swal("Tack för din bokning!", "", "success");
         }}

@@ -64,8 +64,6 @@ export const Booking = () => {
     setBooking(copy);
   };
 
-  console.log(booking);
-
   return (
     <BookingContext.Provider
       value={{

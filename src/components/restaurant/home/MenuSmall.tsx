@@ -1,4 +1,3 @@
-import { stringify } from "querystring";
 import { useState } from "react";
 import { IMenuList } from "../../../models/IMenuList";
 import menuPlates from "./../../../assets/restaurant-plate-3.png";
@@ -9,11 +8,10 @@ import {
   SmallMenuTextWrapper,
   SmallMenuTitleWrapper,
   SmallMenuWrapper,
-  Wrapper,
 } from "../../styled/Wrappers";
-import { SmallMenu, SmallMenuText } from "../../styled/SmallMenu";
+import { SmallMenu } from "../../styled/SmallMenu";
 import { useNavigate } from "react-router-dom";
-import { BG_COLOR, BTN_BORDER, CHAMPAGNE_FADE } from "../../styled/Colors";
+
 import { H2 } from "../../styled/Headings";
 import { Button } from "../../styled/Buttons";
 

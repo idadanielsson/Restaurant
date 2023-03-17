@@ -6,7 +6,6 @@ import {
   MenuCategoryWrapper,
   MenuListWrapper,
   MenuWrapper,
-  Wrapper,
 } from "../../styled/Wrappers";
 import { MenuCategories } from "./menuCategories/MenuCategories";
 

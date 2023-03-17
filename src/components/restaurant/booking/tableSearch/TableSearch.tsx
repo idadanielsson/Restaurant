@@ -35,8 +35,6 @@ export const TableSearch = () => {
 
       let availableTables = 15 - selectedBookings.length;
 
-      console.log(availableTables);
-
       if (availableTables > 0) {
         navigate(`/booking/form`);
       } else {

@@ -1,13 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../styled/Buttons";
-import { BG_COLOR } from "../../styled/Colors";
 import { H3, H5 } from "../../styled/Headings";
 import {
   LocationImageWrapper,
   LocationTextContainer,
   LocationTextWrapper,
   LocationWrapper,
-  Wrapper,
 } from "../../styled/Wrappers";
 
 import foodPlate from "./../../../assets/restaurant-plate-1.png";

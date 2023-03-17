@@ -13,9 +13,8 @@ import {
   FooterContentWrapper,
   FooterIconLinks,
   FooterWrapper,
-  Wrapper,
 } from "../styled/Wrappers";
-import { CHAMPAGNE, DARK_FONT_COLOR } from "../styled/Colors";
+import { DARK_FONT_COLOR } from "../styled/Colors";
 import { H5 } from "../styled/Headings";
 
 export const Footer = () => {

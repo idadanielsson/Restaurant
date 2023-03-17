@@ -1,11 +1,6 @@
 import { IBookingResponse } from "../../../../models/IBookingResponse";
 import { deleteBooking } from "../../../../services/RestaurantService";
-import {
-  Button,
-  Button1,
-  DeleteButton,
-  EditButton,
-} from "../../../styled/Buttons";
+import { DeleteButton, EditButton } from "../../../styled/Buttons";
 import { AdminBookingParagraph } from "../../../styled/Paragraphs";
 import {
   AdminBookingButtonsWrapper,
