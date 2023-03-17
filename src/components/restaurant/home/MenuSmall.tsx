@@ -13,7 +13,7 @@ import { SmallMenu } from "../../styled/SmallMenu";
 import { useNavigate } from "react-router-dom";
 
 import { H2 } from "../../styled/Headings";
-import { Button } from "../../styled/Buttons";
+import { ButtonFade } from "../../styled/Buttons";
 
 export const MenuSmall = () => {
   const [menuSmall, setMenuSmall] = useState<IMenuList[]>([
@@ -43,14 +43,14 @@ export const MenuSmall = () => {
   let menuSmallHtml = menuSmall.map((menuSmall) => {
     return (
       <SmallMenu key={menuSmall.id} bgimage={menuSmall.image}>
-        <Button
+        <ButtonFade
           padding="20px"
           fontSize="24px"
           fontWeight="700"
           onClick={toMenus}
         >
           {menuSmall.name}
-        </Button>
+        </ButtonFade>
       </SmallMenu>
     );
   });

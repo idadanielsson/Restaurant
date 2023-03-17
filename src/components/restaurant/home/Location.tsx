@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Button } from "../../styled/Buttons";
+import { ButtonFade } from "../../styled/Buttons";
 import { H3, H5 } from "../../styled/Headings";
 import {
   LocationImageWrapper,
@@ -26,14 +26,14 @@ export const Location = () => {
           <H5 fontSize="26px">Contact@76gastronome.com</H5>
           <H5 fontSize="26px">0707 - 10 10 10</H5>
         </LocationTextContainer>
-        <Button
+        <ButtonFade
           onClick={toBooking}
           padding="20px"
           fontSize="26px"
           fontWeight="700"
         >
           Boka bord
-        </Button>
+        </ButtonFade>
       </LocationTextWrapper>
     </LocationWrapper>
   );

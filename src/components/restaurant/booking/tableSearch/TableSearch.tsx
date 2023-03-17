@@ -8,7 +8,7 @@ import {
 } from "../../../styled/Wrappers";
 import Calendar from "react-calendar";
 import { AmountOfGuestsHeading } from "../../../styled/Headings";
-import { Button1, TimesButton } from "../../../styled/Buttons";
+import { Button, TimesButton } from "../../../styled/Buttons";
 import { useContext } from "react";
 import { BookingContext } from "../Booking";
 import { BLUE, CHAMPAGNE, FONT_COLOR } from "../../../styled/Colors";
@@ -100,9 +100,9 @@ export const TableSearch = () => {
         </TimesButton>
       </SearchTableTimesWrapper>
       <SearchTableButtonWrapper>
-        <Button1 onClick={searchTable} height="50px" width="200px">
+        <Button onClick={searchTable} height="50px" width="200px">
           Sök bord
-        </Button1>
+        </Button>
       </SearchTableButtonWrapper>
     </BookingWrapper>
   );

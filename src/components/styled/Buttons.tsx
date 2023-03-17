@@ -20,7 +20,7 @@ export interface IButtonProps {
   fontWeight?: string;
 }
 
-export const Button1 = styled.button`
+export const Button = styled.button`
   font-family: "Cormorant Infant", serif;
   border-radius: 50px;
   border: none;
@@ -39,16 +39,13 @@ export const Button1 = styled.button`
   }
 `;
 
-export const TimesButton = styled(Button1)`
+export const TimesButton = styled(Button)`
   border-radius: 2px;
   color: ${(props: IButtonProps) => props.color};
   background-color: ${(props: IButtonProps) => props.bgcolor};
   &:hover {
     background-color: ${FONT_COLOR};
     color: ${BG_COLOR};
-  }
-  &:active {
-    background-color: red;
   }
 
   @media ${breakpoint.mobileMenu} {
@@ -57,7 +54,7 @@ export const TimesButton = styled(Button1)`
   }
 `;
 
-export const Button = styled.button`
+export const ButtonFade = styled.button`
   font-family: "Cormorant Infant", serif;
   background-color: ${CHAMPAGNE_FADE};
   border: ${BTN_BORDER};
@@ -91,7 +88,7 @@ export const ButtonWrapper = styled.div`
   }
 `;
 
-export const HeroButton = styled(Button)`
+export const HeroButton = styled(ButtonFade)`
   text-transform: uppercase;
 
   @media ${breakpoint.mobileMenu} {
@@ -100,7 +97,7 @@ export const HeroButton = styled(Button)`
   }
 `;
 
-export const DeleteButton = styled(Button1)`
+export const DeleteButton = styled(Button)`
   padding: 15px;
 `;
 

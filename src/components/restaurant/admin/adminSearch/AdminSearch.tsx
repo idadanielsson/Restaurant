@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Button1 } from "../../../styled/Buttons";
+
 import {
   BookingWrapper,
   CalendarWrapper,
@@ -8,6 +8,7 @@ import {
 import { Calendar } from "react-calendar";
 import { AdminContext } from "../Admin";
 import { Link } from "react-router-dom";
+import { ButtonFade } from "../../../styled/Buttons";
 
 export const AdminSearch = () => {
   const { handleDate, getAdminBookings } = useContext(AdminContext);
@@ -21,9 +22,9 @@ export const AdminSearch = () => {
       <SearchTableButtonWrapper>
         <Link to="/admin/bookings">
           {" "}
-          <Button1 onClick={getAdminBookings} height="50px" width="200px">
+          <ButtonFade onClick={getAdminBookings} height="50px" width="200px">
             Sök bokningar
-          </Button1>
+          </ButtonFade>
         </Link>
       </SearchTableButtonWrapper>
     </BookingWrapper>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { categories } from "../../../../models/IMenuCategory";
-import { Button, ButtonWrapper } from "../../../styled/Buttons";
+import { ButtonFade, ButtonWrapper } from "../../../styled/Buttons";
 import { BLUE, CHAMPAGNE } from "../../../styled/Colors";
 
 export const MenuCategories = () => {
@@ -19,7 +19,7 @@ export const MenuCategories = () => {
   const categoryHtml = categories.categories.map((c) => {
     return (
       <div key={c.id}>
-        <Button
+        <ButtonFade
           margin="0px px"
           padding="10px 40px"
           fontSize="24px"
@@ -30,7 +30,7 @@ export const MenuCategories = () => {
           }}
         >
           {c.name}
-        </Button>
+        </ButtonFade>
       </div>
     );
   });

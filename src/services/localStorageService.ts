@@ -56,8 +56,6 @@ export const getFilteredBookingsFromLs = () => {
   let filteredBookingsFromLs = localStorage.getItem("filteredBookings");
 
   if (filteredBookingsFromLs) {
-    console.log("hej");
-
     return JSON.parse(localStorage.getItem("filteredBookings") || "");
   } else {
     return [

@@ -1,7 +1,6 @@
 import { FormEvent, useContext } from "react";
 import { Link } from "react-router-dom";
 import { createBooking } from "../../../../services/RestaurantService";
-import { Button1 } from "../../../styled/Buttons";
 import { BookingFormHeading } from "../../../styled/Headings";
 import { Input } from "../../../styled/Inputs";
 import {
@@ -12,6 +11,7 @@ import {
 } from "../../../styled/Wrappers";
 import swal from "sweetalert";
 import { BookingContext } from "../Booking";
+import { ButtonFade } from "../../../styled/Buttons";
 
 export const CustomerForm = () => {
   const { handleChange, booking } = useContext(BookingContext);
@@ -67,10 +67,10 @@ export const CustomerForm = () => {
           ></Input>
         </InputWrapper>
         <BookTableButtonWrapper>
-          <Button1 padding="10px 50px">Bekräfta Bokning</Button1>
+          <ButtonFade padding="10px 50px">Bekräfta Bokning</ButtonFade>
 
           <Link to="/">
-            <Button1 padding="10px 50px">Avbryt bokning</Button1>
+            <ButtonFade padding="10px 50px">Avbryt bokning</ButtonFade>
           </Link>
         </BookTableButtonWrapper>
       </FormWrapper>
