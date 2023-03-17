@@ -8,7 +8,7 @@ import {
 import { Calendar } from "react-calendar";
 import { AdminContext } from "../Admin";
 import { Link } from "react-router-dom";
-import { ButtonFade } from "../../../styled/Buttons";
+import { Button } from "../../../styled/Buttons";
 
 export const AdminSearch = () => {
   const { handleDate, getAdminBookings } = useContext(AdminContext);
@@ -22,9 +22,9 @@ export const AdminSearch = () => {
       <SearchTableButtonWrapper>
         <Link to="/admin/bookings">
           {" "}
-          <ButtonFade onClick={getAdminBookings} height="50px" width="200px">
+          <Button onClick={getAdminBookings} height="50px" width="200px">
             Sök bokningar
-          </ButtonFade>
+          </Button>
         </Link>
       </SearchTableButtonWrapper>
     </BookingWrapper>
