@@ -455,11 +455,10 @@ export const AdminBookingsWrapper = styled.div`
   padding-top: 70px;
   gap: 20px;
   padding: 4rem 2rem;
-  border: 1px solid orange;
   background-color: ${BG_COLOR};
 
   @media ${breakpoint.mobileMenu} {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding: 6rem 2rem;
   }
 `;
@@ -527,6 +526,18 @@ export const MenuItemWrapper = styled.li`
 export const MenuWrapper = styled.div`
   height: 100vh;
   display: flex;
+  align-items: center;
+  flex-direction: column;
+  @media ${breakpoint.mobileMenu} {
+    height: 100%;
+    padding: 2rem;
+  }
+`;
+
+export const EditCardWrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 `;

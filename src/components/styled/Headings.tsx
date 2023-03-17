@@ -103,7 +103,7 @@ export const ItemTitle = styled.h6`
 `;
 
 export const MenuHeading = styled.h2`
-  font-size: 36px;
+  font-size: 60px;
   font-family: "Cormorant Infant", serif;
   text-transform: uppercase;
   padding: 60px;
@@ -113,5 +113,5 @@ export const MenuHeading = styled.h2`
 
   @media ${breakpoint.mobileMenu} {
     padding: 20px 0 0 0;
-  }
+    font-size: 36px;
 `;

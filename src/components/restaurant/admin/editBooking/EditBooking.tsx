@@ -8,7 +8,7 @@ import {
 import { EditButton } from "../../../styled/Buttons";
 import { Input } from "../../../styled/Inputs";
 import { EditBookingParagraph } from "../../../styled/Paragraphs";
-import { Wrapper } from "../../../styled/Wrappers";
+import { EditCardWrapper, Wrapper } from "../../../styled/Wrappers";
 import { AdminContext } from "../Admin";
 
 export const EditBooking = () => {
@@ -49,13 +49,7 @@ export const EditBooking = () => {
   };
 
   return (
-    <Wrapper
-      height="100vh"
-      display="flex"
-      justify="center"
-      align="center"
-      direction="column"
-    >
+    <EditCardWrapper>
       <EditBookingParagraph>
         Bokningsid: {editableBooking.id}
       </EditBookingParagraph>
@@ -72,6 +66,6 @@ export const EditBooking = () => {
       <EditButton padding="20px 40px" onClick={changeBookingFunction}>
         Ändra Bokning
       </EditButton>
-    </Wrapper>
+    </EditCardWrapper>
   );
 };

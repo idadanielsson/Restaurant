@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { menus } from "../../../../models/IMenu";
 import { categories } from "../../../../models/IMenuCategory";
-import { Button } from "../../../styled/Buttons";
+import { Button, ButtonWrapper } from "../../../styled/Buttons";
 import { BLUE, CHAMPAGNE } from "../../../styled/Colors";
 
 export const MenuCategories = () => {
@@ -21,7 +21,7 @@ export const MenuCategories = () => {
     return (
       <div key={c.id}>
         <Button
-          margin="12px"
+          margin="0px px"
           padding="10px 40px"
           fontSize="24px"
           bgcolor={backgroundColor === c.name ? BLUE : CHAMPAGNE}
@@ -36,5 +36,5 @@ export const MenuCategories = () => {
     );
   });
 
-  return <>{categoryHtml}</>;
+  return <ButtonWrapper>{categoryHtml}</ButtonWrapper>;
 };

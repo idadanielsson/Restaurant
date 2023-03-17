@@ -71,12 +71,23 @@ export const Button = styled.button`
   cursor: pointer;
 
   :hover {
-    background-color: #ab947e;
+    background-color: ${CHAMPAGNE_FADE};
   }
 
   @media ${breakpoint.mobileMenu} {
     padding: 7px 15px;
-    font-size: 22px;
+    font-size: 18px;
+  }
+`;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  @media ${breakpoint.mobileMenu} {
+    flex-direction: row;
+    gap: 12px;
   }
 `;
 

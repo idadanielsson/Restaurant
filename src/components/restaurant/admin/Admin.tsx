@@ -31,7 +31,9 @@ export const AdminContext = createContext<IAdminContext>({
 
 export const Admin = () => {
   const [formattedDate, setFormattedDate] = useState(getFormattedDateFromLs());
-  const [bookings, setBookings] = useState<IBookingResponse[]>([]);
+  const [bookings, setBookings] = useState<IBookingResponse[]>(
+    getBookingsFromLs()
+  );
 
   const removeBooking = (b: string) => {
     let copy = [...bookings];
@@ -54,9 +56,9 @@ export const Admin = () => {
     setBookings(copy);
   };
 
-  // useEffect(() => {
-  //   saveBookingsToLs(bookings);
-  // }, [bookings]);
+  useEffect(() => {
+    saveBookingsToLs(bookings);
+  }, [bookings]);
 
   const getAdminBookings = async () => {
     let bookings = await getBookings();
