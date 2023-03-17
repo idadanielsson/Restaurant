@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BTN_BORDER, CHAMPAGNE, FONT_COLOR } from "./Colors";
+import { FONT_COLOR } from "./Colors";
 import { IRestaurantWrapperProps } from "./Wrappers";
 
 export const SmallMenu = styled.div`

@@ -1,16 +1,9 @@
 import { Spin as Hamburger } from "hamburger-react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { FONT_COLOR } from "../styled/Colors";
 import { HamburgerWrapper } from "../styled/Wrappers";
 
 export const HamburgerMenu = () => {
   const [isOpen, setOpen] = useState(false);
-
-  // const onClick = () => {
-  //   setOpen(!isOpen);
-  //   console.log(isOpen);
-  // };
 
   console.log(isOpen);
 

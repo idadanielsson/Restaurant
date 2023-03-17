@@ -9,7 +9,6 @@ export const Nav = () => {
   const [isOpen, setOpen] = useState(Boolean);
   const onClick = () => {
     setOpen(!isOpen);
-    console.log(isOpen);
   };
 
   return (

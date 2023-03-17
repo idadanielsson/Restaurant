@@ -1,4 +1,4 @@
-import { ContactHeading, H1, H2, H5 } from "../styled/Headings";
+import { ContactHeading, H2 } from "../styled/Headings";
 import { BackgroundImage } from "../styled/Images";
 import { ContactTextWrapper, Wrapper } from "../styled/Wrappers";
 import bgImageContact from "./../../assets/restaurant-pasta-2.png";

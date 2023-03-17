@@ -23,7 +23,6 @@ export const AdminBookings = () => {
   useEffect(() => {
     let copy = bookings.filter((b) => b.date === formattedDate);
     setFilteredBookings(copy);
-    console.log(copy);
   }, [bookings]);
 
   let adminBookingsHtml = filteredBookings.map((b) => {
