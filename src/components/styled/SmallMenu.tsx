@@ -1,17 +1,30 @@
 import styled from "styled-components";
+import { breakpoint } from "./Breakpoints";
 import { FONT_COLOR } from "./Colors";
+import { IRestaurantWrapperProps } from "./Wrappers";
 
 export const SmallMenu = styled.div`
+  background-image: url(${(props: IRestaurantWrapperProps) => props.bgimage});
+  background-position: center;
+  background-size: cover;
   width: 100%;
-  position: relative;
-  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media ${breakpoint.mobileMenu} {
+    height: 500px;
+  }
 `;
 
 export const SmallMenuText = styled.p`
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
   font-size: 30px;
   color: ${FONT_COLOR};
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border: 1px solid ${FONT_COLOR};
 `;

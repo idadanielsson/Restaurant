@@ -1,0 +1,27 @@
+.nav {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    transform: translateX(-100%);
+    transition: ease-in 0.4s;
+  }
+}
+
+.navActive {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .navActive {
+    background-color: #1e1f20e4;
+    width: 200px;
+    transform: translateX(0%);
+    transition: ease-out 0.4s;
+    position: absolute;
+  }
+}

@@ -1,6 +1,15 @@
 import styled from "styled-components";
-import backgroundImage from "./../../assets/restaurant-hero.png";
 import aboutIMage from "./../../assets/restaurant-pasta.png";
+import { breakpoint } from "./Breakpoints";
+
+export interface IImageProps {
+  bgImage?: string;
+  display?: string;
+  direction?: string;
+  justify?: string;
+  align?: string;
+  gap?: string;
+}
 
 export const AboutImageWrapper = styled.div`
   background-image: url(${aboutIMage});
@@ -10,19 +19,39 @@ export const AboutImageWrapper = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   bottom: 0;
+
+  @media ${breakpoint.mobileMenu} {
+    height: 25vh;
+  }
 `;
 
-export const HeroWrapper = styled.div`
+export const BackgroundImage = styled.div`
   height: 100%;
   width: 100%;
-
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url(${(props: IImageProps) => props.bgImage});
+  display: ${(props: IImageProps) => props.display};
+  flex-direction: ${(props: IImageProps) => props.direction};
+  justify-content: ${(props: IImageProps) => props.justify};
+  align-items: ${(props: IImageProps) => props.align};
+  gap: ${(props: IImageProps) => props.gap}; ;
+`;
+
+export const HeroWrapper = styled(BackgroundImage)`
   position: absolute;
   top: 0;
   z-index: 0;
-  background-image: url(${backgroundImage});
+
+  @media ${breakpoint.mobileMenu} {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    background-position: left;
+  }
 `;
 
 export const MenuSmallImage = styled.img`
