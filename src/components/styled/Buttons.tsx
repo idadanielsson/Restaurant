@@ -89,7 +89,6 @@ export const DeleteButton = styled(Button1)`
 
 export const EditButton = styled(Button1)`
   @media ${breakpoint.mobileMenu} {
-    padding: 0px;
-    height: 5px;
+    padding: 15px;
   }
 `;

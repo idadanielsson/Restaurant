@@ -369,12 +369,14 @@ export const AdminBookingWrapper = styled.div`
 `;
 
 export const AdminBookingsWrapper = styled.div`
-  height: 100%;
+  height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding-top: 70px;
   gap: 20px;
   padding: 4rem 2rem;
+  border: 1px solid orange;
+  background-color: ${BG_COLOR};
 
   @media ${breakpoint.mobileMenu} {
     grid-template-columns: 1fr 1fr;

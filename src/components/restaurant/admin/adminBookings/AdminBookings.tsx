@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { IBookingResponse } from "../../../../models/IBookingResponse";
 import {
   getFilteredBookingsFromLs,
-  saveFilteredBookingsToLs,
+  // saveFilteredBookingsToLs,
 } from "../../../../services/localStorageService";
 
 import { AdminBookingsWrapper } from "../../../styled/Wrappers";
@@ -14,16 +14,18 @@ export const AdminBookings = () => {
     useContext(AdminContext);
 
   const [filteredBookings, setFilteredBookings] = useState<IBookingResponse[]>(
-    getFilteredBookingsFromLs()
+    []
   );
-  useEffect(() => {
-    saveFilteredBookingsToLs(filteredBookings);
-  }, [filteredBookings]);
+  // useEffect(() => {
+  //   saveFilteredBookingsToLs(filteredBookings);
+  // }, [filteredBookings]);
 
   useEffect(() => {
-    let copy = bookings.filter((b) => b.date === formattedDate);
-    setFilteredBookings(copy);
-    console.log(copy);
+    if (bookings) {
+      let copy = bookings.filter((b) => b.date === formattedDate);
+      setFilteredBookings(copy);
+      console.log(copy);
+    }
   }, [bookings]);
 
   let adminBookingsHtml = filteredBookings.map((b) => {
